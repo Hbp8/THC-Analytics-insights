@@ -1,0 +1,11 @@
+thc_insights_profile:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "thcanalyticsinsights"
+      dataset: "thcanalyticsinsights_dev_1"
+      threads: 4
+      timeout_seconds: 300
+      location: EU
