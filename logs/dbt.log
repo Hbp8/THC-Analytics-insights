@@ -310,3 +310,104 @@ Finished 'deps' successfully [692ms]
 09:12:57.964248 [info ]: 
 ==================== Execution Summary =====================
 Finished 'clean' successfully [163ms]
+==================== 2026-10-06T09:48:27.972842Z | 01a1109d-51bb-79b1-87ee-f750f93c0faa ====================
+09:48:27.974339 [info ]: dbt 2.0.6
+09:48:27.976590 [info ]: Started loading project
+09:48:27.985340 [info ]: Loading ~/.dbt/profiles.yml
+09:48:27.986651 [info ]: Finished loading project [  0.01s]
+09:48:27.988534 [error]: [IoError (dbt1001)]: Profile 'thc_analytics' not found in profiles.yml
+  --> dbt_project.yml:5:10
+09:48:28.173717 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [200ms]
+==================== 2026-10-06T09:48:40.569775Z | 01a1109d-82f8-7f91-a041-c66aceda49de ====================
+09:48:40.569842 [info ]: dbt 2.0.6
+09:48:40.569937 [info ]: Started loading project
+09:48:40.570392 [info ]: Loading ~/.dbt/profiles.yml
+09:48:40.570719 [info ]: Finished loading project [  0.00s]
+09:48:40.570808 [error]: [IoError (dbt1001)]: Profile 'thc_analytics' not found in profiles.yml
+  --> dbt_project.yml:5:10
+09:48:40.685591 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [115ms]
+==================== 2026-10-06T10:10:40.537932Z | 01a110b1-a70b-7072-b42c-db22c39bf876 ====================
+10:10:40.539822 [info ]: dbt 2.0.6
+10:10:40.544455 [info ]: Started loading project
+10:10:40.561663 [info ]: Loading dbt/profiles.yml
+10:10:40.752573 [info ]: Loading packages.yml
+10:10:40.764373 [debug]:    Started loading packages
+10:10:40.784143 [debug]:     Loaded [  0.02s] packages
+10:10:40.791684 [info ]: Finished loading project [  0.25s]
+10:10:40.796589 [info ]: Started parsing
+10:10:40.852231 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"source"`. YAML path: `source`.
+  --> models/staging/_src_thc_analytics.yml:3:1
+10:10:40.852618 [debug]: Finished parsing models/staging/_src_thc_analytics.yml [  0.00s]
+10:10:40.860468 [debug]: Finished parsing models/staging/stg_thc_analytics__orders.sql [  0.01s]
+10:10:41.043524 [error]: [DependencyNotFound (dbt1048)]: Source 'thc_analytics.orders' not found in project. Searched for 'thc_analytics.thc_analytics.orders, thc_analytics.orders'
+  --> models/staging/stg_thc_analytics__orders.sql:5:14
+10:10:41.043848 [warn ]: [UnusedResourceConfigPath (dbt1097)]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.thc_analytics.marts
+10:10:41.045023 [info ]: Finished parsing [  0.25s]
+10:10:41.477682 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+10:10:41.477682 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning and 2 errors for target 'dev' [939ms]
+==================== 2026-10-06T10:10:47.036557Z | 01a110b1-c07b-7c80-8af6-2993fd0ca2d3 ====================
+10:10:47.036646 [info ]: dbt 2.0.6
+10:10:47.189700 [info ]: Loading packages.yml
+10:10:47.189738 [info ]: Installing packages
+10:10:47.223784 [info ]: Installing dbt-labs/codegen
+10:10:47.224405 [info ]: Installing dbt-labs/dbt_utils
+10:10:48.341241 [info ]:  Installed dbt-labs/codegen: 0.14.1
+10:10:48.518033 [info ]:  Installed dbt-labs/dbt_utils: 1.4.1
+10:10:48.518157 [info ]:  Installed 2 packages
+10:10:48.665366 [info ]: 
+==================== Execution Summary =====================
+Finished 'deps' successfully [1.6s]
+==================== 2026-10-06T10:10:50.398468Z | 01a110b1-cd9d-77e3-8852-5d0b64c01e83 ====================
+10:10:50.398568 [info ]: dbt 2.0.6
+10:10:50.398703 [info ]: Started loading project
+10:10:50.399226 [info ]: Loading dbt/profiles.yml
+10:10:50.542522 [info ]: Loading packages.yml
+10:10:50.542886 [debug]:    Started loading packages
+10:10:50.544636 [debug]:     Loaded [  0.00s] packages
+10:10:50.545213 [info ]: Finished loading project [  0.15s]
+10:10:50.545914 [info ]: Started parsing
+10:10:50.574366 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"source"`. YAML path: `source`.
+  --> models/staging/_src_thc_analytics.yml:3:1
+10:10:50.574399 [debug]: Finished parsing models/staging/_src_thc_analytics.yml [  0.00s]
+10:10:50.574982 [debug]: Finished parsing models/staging/stg_thc_analytics__orders.sql [  0.00s]
+10:10:50.704922 [error]: [DependencyNotFound (dbt1048)]: Source 'thc_analytics.orders' not found in project. Searched for 'thc_analytics.thc_analytics.orders, thc_analytics.orders'
+  --> models/staging/stg_thc_analytics__orders.sql:5:14
+10:10:50.705070 [warn ]: [UnusedResourceConfigPath (dbt1097)]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.thc_analytics.marts
+10:10:50.705618 [info ]: Finished parsing [  0.16s]
+10:10:51.108687 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+10:10:51.108687 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning and 2 errors for target 'dev' [710ms]
+==================== 2026-10-06T10:11:30.426932Z | 01a110b2-69f1-7680-88e2-b41d2219410c ====================
+10:11:30.427009 [info ]: dbt 2.0.6
+10:11:30.427146 [info ]: Started loading project
+10:11:30.427609 [info ]: Loading dbt/profiles.yml
+10:11:30.576431 [info ]: Loading packages.yml
+10:11:30.577231 [debug]:    Started loading packages
+10:11:30.579735 [debug]:     Loaded [  0.00s] packages
+10:11:30.580312 [info ]: Finished loading project [  0.15s]
+10:11:30.580904 [info ]: Started parsing
+10:11:30.618468 [error]: [UnusedConfigKey (dbt1060)]: Ignored unexpected key `"source"`. YAML path: `source`.
+  --> models/staging/_src_thc_analytics.yml:3:1
+10:11:30.618503 [debug]: Finished parsing models/staging/_src_thc_analytics.yml [  0.00s]
+10:11:30.619085 [debug]: Finished parsing models/staging/stg_thc_analytics__orders.sql [  0.00s]
+10:11:30.746705 [error]: [DependencyNotFound (dbt1048)]: Source 'thc_analytics.orders' not found in project. Searched for 'thc_analytics.thc_analytics.orders, thc_analytics.orders'
+  --> models/staging/stg_thc_analytics__orders.sql:5:14
+10:11:30.746811 [warn ]: [UnusedResourceConfigPath (dbt1097)]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.thc_analytics.marts
+10:11:30.747277 [info ]: Finished parsing [  0.17s]
+10:11:31.173222 [info ]: suggestion: Run 'dbt deps' to see the latest fusion compatible packages. For compatibility errors, try the autofix script: https://github.com/dbt-labs/dbt-autofix
+10:11:31.173222 [info ]: 
+==================== Execution Summary =====================
+Finished 'build' with 1 warning and 2 errors for target 'dev' [746ms]
