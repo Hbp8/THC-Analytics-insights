@@ -1,0 +1,5 @@
+# directory to ignore build artifacts
+target/
+dbt_packages/
+logs/
+dbt_internal_packages/
