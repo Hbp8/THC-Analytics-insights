@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: thc_analytics
+    database: thcanalyticsinsights
+    schema: thcanalyticsinsights_dev_1
+    description: "The source models for the THC Analytics project, based on csv imports."
+    tables:
+      - name: sales_recrutement
+        description: "The raw table for sales recruitment data."
+        columns:
+          - name: date_date
+            description: "The date at which the sale was made."
+            data_tests:
+              - not_null
+          - name: customer_id
+            description: "The unique ID of the customer."
+            data_tests:
+              - not_null
+          - name: order_id
+            description: "The unique ID of the order. Primary key for the sales_recrutement table."
+            data_tests:
+              - not_null
+          - name: products_id
+            description: "The unique ID of the product."
+            data_tests:
+              - not_null
+          - name: net_sales
+            description: "The net sales amount."
+            data_tests:
+              - not_null
+          - name: qty
+            description: "The quantity of items sold."
+            data_tests:
+              - not_null
+      - name: orders_recrutement
+        description: "The raw table for orders recruitment data."
+        columns:
+          - name: date_date
+            description: "The date at which the order was made."
+            data_tests:
+              - not_null
+          - name: customers_id
+            description: "The unique ID of the customer."
+            data_tests:
+              - not_null
+          - name: orders_id
+            description: "The unique ID of the order. Primary key for the orders_recrutement table."
+            data_tests:
+              - unique
+              - not_null
+          - name: net_sales
+            description: "The net sales amount."
+            data_tests:
+              - not_null
