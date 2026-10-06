@@ -104,3 +104,220 @@ Finished 'compile' with 1 warning for target 'dev' [38ms]
 08:43:02.842930 [debug]: Ignoring unsupported LSP notification
 08:43:02.864246 [debug]: Ignoring unsupported LSP notification
 08:43:02.904626 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-06T08:57:21.641432Z | 58e28a3f-ac1e-4f8b-b9fd-baaf08d3c826 ====================
+08:57:21.648197 [info ]: Started loading project
+08:57:21.665406 [info ]: Loading ~/.dbt/profiles.yml
+08:57:21.702307 [info ]: Finished loading project [  0.05s]
+08:57:21.724446 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [83ms]
+08:57:21.725509 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-06T08:57:22.923386Z | a18e35b5-3b61-4ec2-9eae-debc826a9fc7 ====================
+08:57:22.924668 [info ]: Started loading project
+08:57:22.925234 [info ]: Loading ~/.dbt/profiles.yml
+08:57:22.929299 [info ]: Finished loading project [  0.00s]
+08:57:22.954005 [info ]: Cached model count updated: 0 models (estimate)
+08:57:22.954021 [info ]: Cached model count updated: 0 models (accurate)
+08:57:22.956065 [info ]: Started scheduling
+08:57:22.957747 [info ]: Finished scheduling [  0.00s]
+08:57:22.958373 [debug]: Compilation - 0 nodes selected: {}
+08:57:22.959548 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:57:22.974763 [info ]: Started building task graph
+08:57:22.975489 [info ]: Finished building task graph [  0.00s]
+08:57:23.003560 [info ]: Started scheduling
+08:57:23.003991 [info ]: Finished scheduling [  0.00s]
+08:57:23.004570 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [81ms]
+08:57:23.004625 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-06T08:58:38.674923Z | 4bcdfaf7-ae2d-4d75-ac81-ba95bf876358 ====================
+08:58:38.681465 [info ]: Started loading project
+08:58:38.695180 [info ]: Loading ~/.dbt/profiles.yml
+08:58:38.717612 [info ]: Finished loading project [  0.04s]
+08:58:38.736503 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [61ms]
+08:58:38.737021 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-06T08:58:39.928509Z | e13c8164-db01-4451-89e9-99e47650663a ====================
+08:58:39.928994 [info ]: Started loading project
+08:58:39.930150 [info ]: Loading ~/.dbt/profiles.yml
+08:58:39.936023 [info ]: Finished loading project [  0.01s]
+08:58:39.962240 [info ]: Cached model count updated: 0 models (estimate)
+08:58:39.962258 [info ]: Cached model count updated: 0 models (accurate)
+08:58:39.964149 [info ]: Started scheduling
+08:58:39.966199 [info ]: Finished scheduling [  0.00s]
+08:58:39.966368 [debug]: Compilation - 0 nodes selected: {}
+08:58:39.967156 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:58:39.981192 [info ]: Started building task graph
+08:58:39.983445 [info ]: Finished building task graph [  0.00s]
+08:58:40.014081 [info ]: Started scheduling
+08:58:40.014969 [info ]: Finished scheduling [  0.00s]
+08:58:40.015136 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [86ms]
+08:58:40.015189 [info ]: Cached model count updated: 0 models (accurate)
+08:58:48.050815 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-06T08:58:59.255265Z | d3a7716c-5afb-4d64-a74d-9da0e418e5ff ====================
+08:58:59.255523 [info ]: Started loading project
+08:58:59.256181 [info ]: Loading ~/.dbt/profiles.yml
+08:58:59.268499 [info ]: Finished loading project [  0.01s]
+==================== 2026-10-06T08:58:59.269617Z | db368883-86bc-40c1-96d9-651e95d2469f ====================
+08:58:59.269641 [info ]: Started loading project
+08:58:59.269785 [info ]: Loading ~/.dbt/profiles.yml
+08:58:59.436397 [debug]:    Started loading packages
+08:58:59.436848 [debug]:     Loaded [  0.00s] packages
+08:58:59.437337 [info ]: Finished loading project [  0.17s]
+08:58:59.439856 [info ]: Started parsing
+08:58:59.556842 [warn ]: [UnusedResourceConfigPath (dbt1097)]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.thc_analytics.marts
+- models.thc_analytics.staging
+08:58:59.557994 [info ]: Finished parsing [  0.12s]
+08:58:59.560182 [info ]: Cached model count updated: 0 models (estimate)
+08:58:59.560193 [info ]: Cached model count updated: 0 models (accurate)
+08:58:59.560215 [info ]: Started scheduling
+08:58:59.560254 [info ]: Finished scheduling [  0.00s]
+08:58:59.560262 [debug]: Compilation - 0 nodes selected: {}
+08:58:59.560428 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+08:58:59.560437 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:58:59.560446 [info ]: Started scheduling
+08:58:59.560453 [info ]: Finished scheduling [  0.00s]
+08:58:59.562085 [info ]: Started building task graph
+08:58:59.562102 [info ]: Finished building task graph [  0.00s]
+08:58:59.566512 [info ]: Started scheduling
+08:58:59.566525 [info ]: Finished scheduling [  0.00s]
+08:58:59.566777 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 3 warnings for target 'dev' [297ms]
+08:58:59.566823 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [311ms]
+08:58:59.566851 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-06T08:59:00.750803Z | 9f5d3c02-6daf-4df0-82f3-0016ae4d1bde ====================
+08:59:00.750845 [info ]: Started loading project
+08:59:00.751104 [info ]: Loading ~/.dbt/profiles.yml
+08:59:00.753792 [info ]: Finished loading project [  0.00s]
+08:59:00.772233 [info ]: Cached model count updated: 0 models (estimate)
+08:59:00.772251 [info ]: Cached model count updated: 0 models (accurate)
+08:59:00.772263 [info ]: Started scheduling
+08:59:00.772280 [info ]: Finished scheduling [  0.00s]
+08:59:00.772289 [debug]: Compilation - 0 nodes selected: {}
+08:59:00.772300 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+08:59:00.773019 [info ]: Started building task graph
+08:59:00.773030 [info ]: Finished building task graph [  0.00s]
+08:59:00.777753 [info ]: Started scheduling
+08:59:00.777769 [info ]: Finished scheduling [  0.00s]
+08:59:00.778920 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [28ms]
+08:59:00.778984 [info ]: Cached model count updated: 0 models (accurate)
+08:59:05.868621 [debug]: Ignoring unsupported LSP notification
+09:00:46.411879 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-10-06T09:00:49.794714Z | a73507d4-42f2-41dd-b911-eaa3ff1af821 ====================
+09:00:49.794754 [info ]: Started loading project
+09:00:49.794946 [info ]: Loading ~/.dbt/profiles.yml
+09:00:49.797903 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-06T09:00:49.799278Z | 03fcc80b-09a8-4ad4-b6af-7e1a2b225f0e ====================
+09:00:49.799301 [info ]: Started loading project
+09:00:49.799455 [info ]: Loading ~/.dbt/profiles.yml
+09:00:49.941557 [debug]:    Started loading packages
+09:00:49.941993 [debug]:     Loaded [  0.00s] packages
+09:00:49.942498 [info ]: Finished loading project [  0.14s]
+09:00:49.942652 [info ]: Started parsing
+09:00:50.035063 [warn ]: [UnusedResourceConfigPath (dbt1097)]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.thc_analytics.marts
+- models.thc_analytics.staging
+09:00:50.035465 [info ]: Finished parsing [  0.09s]
+09:00:50.035602 [info ]: Cached model count updated: 0 models (estimate)
+09:00:50.035608 [info ]: Cached model count updated: 0 models (accurate)
+09:00:50.035622 [info ]: Started scheduling
+09:00:50.035643 [info ]: Finished scheduling [  0.00s]
+09:00:50.035650 [debug]: Compilation - 0 nodes selected: {}
+09:00:50.035671 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:00:50.035680 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:00:50.035687 [info ]: Started scheduling
+09:00:50.035694 [info ]: Finished scheduling [  0.00s]
+09:00:50.036270 [info ]: Started building task graph
+09:00:50.036284 [info ]: Finished building task graph [  0.00s]
+09:00:50.045178 [info ]: Started scheduling
+09:00:50.045225 [info ]: Finished scheduling [  0.00s]
+09:00:50.045311 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 3 warnings for target 'dev' [246ms]
+09:00:50.045359 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [250ms]
+09:00:50.045422 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-06T09:00:51.226008Z | 25af11a3-91ff-4e7e-a504-0455858d8250 ====================
+09:00:51.226153 [info ]: Started loading project
+09:00:51.226831 [info ]: Loading ~/.dbt/profiles.yml
+09:00:51.229345 [info ]: Finished loading project [  0.00s]
+09:00:51.247186 [info ]: Cached model count updated: 0 models (estimate)
+09:00:51.247204 [info ]: Cached model count updated: 0 models (accurate)
+09:00:51.247214 [info ]: Started scheduling
+09:00:51.247230 [info ]: Finished scheduling [  0.00s]
+09:00:51.247240 [debug]: Compilation - 0 nodes selected: {}
+09:00:51.247250 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:00:51.248002 [info ]: Started building task graph
+09:00:51.248012 [info ]: Finished building task graph [  0.00s]
+09:00:51.252006 [info ]: Started scheduling
+09:00:51.252024 [info ]: Finished scheduling [  0.00s]
+09:00:51.252074 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [26ms]
+09:00:51.252128 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-06T09:00:53.289293Z | dfa2ba1a-3892-4f3b-afa0-7ce93d06f725 ====================
+09:00:53.289330 [info ]: Started loading project
+09:00:53.289543 [info ]: Loading ~/.dbt/profiles.yml
+09:00:53.291640 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-06T09:00:53.293154Z | 66efba7f-69d3-4ae9-873d-cd00e09ad63c ====================
+09:00:53.293179 [info ]: Started loading project
+09:00:53.293325 [info ]: Loading ~/.dbt/profiles.yml
+09:00:53.428079 [debug]:    Started loading packages
+09:00:53.428514 [debug]:     Loaded [  0.00s] packages
+09:00:53.429008 [info ]: Finished loading project [  0.14s]
+09:00:53.429149 [info ]: Started parsing
+09:00:53.521504 [warn ]: [UnusedResourceConfigPath (dbt1097)]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.thc_analytics.marts
+- models.thc_analytics.staging
+09:00:53.521925 [info ]: Finished parsing [  0.09s]
+09:00:53.522048 [info ]: Cached model count updated: 0 models (estimate)
+09:00:53.522056 [info ]: Cached model count updated: 0 models (accurate)
+09:00:53.522067 [info ]: Started scheduling
+09:00:53.522083 [info ]: Finished scheduling [  0.00s]
+09:00:53.522090 [debug]: Compilation - 0 nodes selected: {}
+09:00:53.522101 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+09:00:53.522110 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:00:53.522119 [info ]: Started scheduling
+09:00:53.522126 [info ]: Finished scheduling [  0.00s]
+09:00:53.522831 [info ]: Started building task graph
+09:00:53.522841 [info ]: Finished building task graph [  0.00s]
+09:00:53.526601 [info ]: Started scheduling
+09:00:53.526618 [info ]: Finished scheduling [  0.00s]
+09:00:53.526682 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 3 warnings for target 'dev' [233ms]
+09:00:53.526724 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [237ms]
+09:00:53.527704 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-06T09:00:54.720011Z | 6804129b-b372-45e7-a710-fcc35e5a1569 ====================
+09:00:54.720692 [info ]: Started loading project
+09:00:54.721752 [info ]: Loading ~/.dbt/profiles.yml
+09:00:54.726085 [info ]: Finished loading project [  0.01s]
+09:00:54.750972 [info ]: Cached model count updated: 0 models (estimate)
+09:00:54.750988 [info ]: Cached model count updated: 0 models (accurate)
+09:00:54.751002 [info ]: Started scheduling
+09:00:54.751025 [info ]: Finished scheduling [  0.00s]
+09:00:54.751036 [debug]: Compilation - 0 nodes selected: {}
+09:00:54.751055 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+09:00:54.751822 [info ]: Started building task graph
+09:00:54.751834 [info ]: Finished building task graph [  0.00s]
+09:00:54.756424 [info ]: Started scheduling
+09:00:54.756444 [info ]: Finished scheduling [  0.00s]
+09:00:54.756493 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [36ms]
+09:00:54.756566 [info ]: Cached model count updated: 0 models (accurate)

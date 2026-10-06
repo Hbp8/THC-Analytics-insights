@@ -9,3 +9,12 @@ seed-paths: ["seeds"]
 snapshot-paths: ["snapshots"]
 analysis-paths: ["analyses"]
 macro-paths: ["macros"]
+
+models:
+  thc_analytics:
+    staging:
+      # Materialization of staging models
+      +materialized: view
+    marts:
+      # Materialization of marts models
+      +materialized: table
