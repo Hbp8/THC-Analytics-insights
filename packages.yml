@@ -1,0 +1,7 @@
+packages:
+  - package: dbt-labs/codegen
+    #dbt version required: >=1.1.0, <3.0.0
+    version: 0.14.1
+  - package: dbt-labs/dbt_utils
+    #dbt version required: >=1.3.0, <3.0.0
+    version: 1.4.1

@@ -283,3 +283,20 @@ select 1 as id
 08:43:19.550919 [info ]: 
 ==================== Execution Summary =====================
 Finished 'debug' successfully for target 'dev' [2.5s]
+==================== 2026-10-06T09:08:37.345709Z | 01a11078-d75f-75f1-b283-06e2cac63162 ====================
+09:08:37.497282 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [151ms]
+==================== 2026-10-06T09:09:02.516127Z | 01a11079-39aa-7df2-ae44-593ab8fda0c4 ====================
+09:09:02.518645 [info ]: dbt 2.0.6
+09:09:02.683923 [info ]:    Started resolving packages from packages.yml
+09:09:02.835760 [info ]:   Finished [  0.15s] resolving packages from packages.yml (2 items)
+09:09:02.835962 [info ]: Installing packages
+09:09:02.836960 [info ]: Installing dbt-labs/dbt_utils
+09:09:02.837147 [info ]: Installing dbt-labs/codegen
+09:09:03.147718 [info ]:  Installed dbt-labs/dbt_utils: 1.4.1
+09:09:03.165218 [info ]:  Installed dbt-labs/codegen: 0.14.1
+09:09:03.165298 [info ]:  Installed 2 packages
+09:09:03.208512 [info ]: 
+==================== Execution Summary =====================
+Finished 'deps' successfully [692ms]

@@ -321,3 +321,22 @@ Finished 'compile' successfully for target 'dev' [237ms]
 ==================== Execution Summary =====================
 Finished 'compile' with 1 warning for target 'dev' [36ms]
 09:00:54.756566 [info ]: Cached model count updated: 0 models (accurate)
+09:01:04.195221 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-10-06T09:08:36.035024Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-06T09:08:36.035879Z | 88c3ebe1-f484-4dcb-848e-fc7c0dd44f97 ====================
+09:08:36.036046 [info ]: Starting dbt LSP server
+09:08:36.036062 [info ]: Connecting to LSP client on port 8000
+09:08:36.036310 [info ]: Successfully connected to LSP client
+09:08:36.036320 [info ]: Creating LSP service...
+09:08:36.040392 [info ]: Creating LSP server...
+09:08:36.040410 [info ]: Starting LSP server...
+09:08:36.133197 [info ]: Loading ~/.dbt/profiles.yml
+09:08:36.758242 [debug]: Ignoring unsupported LSP notification
+09:08:37.966196 [info ]: Loading ~/.dbt/profiles.yml
+09:08:51.434803 [info ]: Loading ~/.dbt/profiles.yml
+09:08:51.551210 [info ]: Loading ~/.dbt/profiles.yml
+09:08:53.756515 [info ]: Loading ~/.dbt/profiles.yml
+09:09:02.849448 [info ]: Loading ~/.dbt/profiles.yml
+09:09:03.233354 [info ]: Loading ~/.dbt/profiles.yml
+09:09:03.572621 [info ]: Loading ~/.dbt/profiles.yml
+09:09:09.910569 [info ]: Loading ~/.dbt/profiles.yml
