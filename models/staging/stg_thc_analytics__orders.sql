@@ -2,7 +2,7 @@ with
     source as (
         select
             *
-        from {{ source('thc_analytics', 'orders') }}
+        from {{ source('thc_analytics', 'orders_recrutement') }}
     ),
     renamed as (
         select
