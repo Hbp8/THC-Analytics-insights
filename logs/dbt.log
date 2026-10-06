@@ -300,3 +300,13 @@ Finished 'internal' successfully [151ms]
 09:09:03.208512 [info ]: 
 ==================== Execution Summary =====================
 Finished 'deps' successfully [692ms]
+==================== 2026-10-06T09:12:57.801224Z | 01a1107c-d0c2-7683-8d30-a67b3ce03eb2 ====================
+09:12:57.802804 [info ]: dbt 2.0.6
+09:12:57.803635 [info ]: Started cleaning
+09:12:57.804739 [info ]: Started loading project
+09:12:57.809662 [info ]: Loading ~/.dbt/profiles.yml
+09:12:57.810115 [info ]: Finished loading project [  0.01s]
+09:12:57.810327 [info ]: Finished cleaning [  0.01s]
+09:12:57.964248 [info ]: 
+==================== Execution Summary =====================
+Finished 'clean' successfully [163ms]

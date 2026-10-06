@@ -340,3 +340,21 @@ Finished 'compile' with 1 warning for target 'dev' [36ms]
 09:09:03.233354 [info ]: Loading ~/.dbt/profiles.yml
 09:09:03.572621 [info ]: Loading ~/.dbt/profiles.yml
 09:09:09.910569 [info ]: Loading ~/.dbt/profiles.yml
+09:09:44.587833 [info ]: Loading ~/.dbt/profiles.yml
+09:10:12.154067 [info ]: Loading ~/.dbt/profiles.yml
+09:10:15.116442 [debug]: Ignoring unsupported LSP notification
+09:11:05.134273 [info ]: Loading ~/.dbt/profiles.yml
+09:11:35.907266 [info ]: Loading ~/.dbt/profiles.yml
+09:11:37.879796 [info ]: Loading ~/.dbt/profiles.yml
+09:12:02.782722 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-10-06T09:12:27.934977Z | b2cef393-cc55-4c06-9765-6da6f0e845f5 ====================
+09:12:27.938811 [info ]: Started loading project
+09:12:27.947926 [info ]: Loading ~/.dbt/profiles.yml
+09:12:27.949748 [info ]: Finished loading project [  0.01s]
+09:12:27.950044 [error]: [IoError (dbt1001)]: Profile 'thc_analytics' not found in profiles.yml
+  --> dbt_project.yml:5:10
+09:12:27.951828 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [16ms]
+09:12:43.167956 [info ]: Loading ~/.dbt/profiles.yml
+09:12:58.361541 [info ]: Loading ~/.dbt/profiles.yml
