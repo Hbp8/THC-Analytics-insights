@@ -1,4 +1,4 @@
-thc_insights_profile:
+thc_analytics:
   target: dev
   outputs:
     dev:
