@@ -1,0 +1,285 @@
+==================== 2026-10-05T17:05:32.840437Z | 01a10d07-1ea3-7ef2-9c85-36cf357af4ce ====================
+17:05:32.840901 [info ]: dbt 2.0.6
+17:05:32.843298 [info ]: Started loading project
+17:05:32.852398 [info ]: Loading ~/.dbt/profiles.yml
+17:05:32.853828 [info ]: Finished loading project [  0.01s]
+17:05:32.855982 [error]: [IoError (dbt1001)]: Profile 'thc_analytics' not found in profiles.yml
+  --> dbt_project.yml:5:10
+17:05:33.034626 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' with 1 error [194ms]
+==================== 2026-10-05T17:08:03.353512Z | 01a10d09-6a93-71b1-9c60-d2cb543d9677 ====================
+17:08:03.551500 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [197ms]
+==================== 2026-10-05T17:10:06.956001Z | 01a10d0b-4d5c-7bf1-bffe-4fec216fbdd7 ====================
+17:10:06.957623 [info ]: dbt 2.0.6
+17:10:06.960495 [info ]: Started loading project
+17:10:06.978473 [info ]: Loading ~/.dbt/profiles.yml
+17:10:06.980813 [info ]: Finished loading project [  0.02s]
+17:10:06.981984 [error]: [IoError (dbt1001)]: Profile 'thc_analytics' not found in profiles.yml
+  --> dbt_project.yml:5:10
+17:10:07.140210 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' with 1 error [184ms]
+==================== 2026-10-05T17:16:36.023740Z | 01a10d11-3d28-7710-bddf-413a7906802d ====================
+17:16:36.025389 [info ]: dbt 2.0.6
+17:16:36.028103 [info ]: Started loading project
+17:16:36.050012 [info ]: Loading dbt/profiles.yml
+17:16:36.061561 [info ]: Finished loading project [  0.03s]
+17:16:36.063580 [info ]: Started debugging
+17:16:36.064452 [info ]: Debugging profile: dev
+17:16:36.064471 [info ]: Debugging dbt version: 2.0.6
+17:16:36.064631 [info ]: Debugging platform: macos aarch64 (unix)
+17:16:36.064919 [info ]: Debugging adapter type: bigquery (remote)
+17:16:36.089422 [info ]: Debugging dependencies:
+  git: OK
+17:16:36.091953 [info ]: Debugging connection:
+  "database": "thcanalyticsinsights",
+  "schema": "thcanalyticsinsights_dev_1",
+  "timeout_seconds": 300,
+  "method": "oauth",
+  "location": "EU",
+  "dataproc_batch": null
+17:16:36.098290 [debug]: BigQuery driver resolved: bigquery 0.21.0.dev+dbt0.21.19
+17:16:36.274485 [info ]: Debugging connection test: ERROR
+17:16:36.274923 [info ]: Finished debugging [  0.21s]
+17:16:36.276097 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `bigquery` adapter.
+The following error was returned:
+
+[BigQuery] bigquery: constructing client: credentials: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+17:16:36.917575 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' with 1 error for target 'dev' [893ms]
+==================== 2026-10-05T17:16:56.129257Z | 01a10d11-8bc0-7863-b162-05b50f987fbb ====================
+17:16:56.129350 [info ]: dbt 2.0.6
+17:16:56.129473 [info ]: Started loading project
+17:16:56.130291 [info ]: Loading dbt/profiles.yml
+17:16:56.130801 [info ]: Finished loading project [  0.00s]
+17:16:56.130855 [info ]: Started debugging
+17:16:56.130882 [info ]: Debugging profile: dev
+17:16:56.130896 [info ]: Debugging dbt version: 2.0.6
+17:16:56.130908 [info ]: Debugging platform: macos aarch64 (unix)
+17:16:56.130921 [info ]: Debugging adapter type: bigquery (remote)
+17:16:56.149963 [info ]: Debugging dependencies:
+  git: OK
+17:16:56.150028 [info ]: Debugging connection:
+  "database": "thcanalyticsinsights",
+  "schema": "thcanalyticsinsights_dev_1",
+  "timeout_seconds": 300,
+  "method": "oauth",
+  "location": "EU",
+  "dataproc_batch": null
+17:16:56.150153 [debug]: BigQuery driver resolved: bigquery 0.21.0.dev+dbt0.21.19
+17:16:56.300150 [info ]: Debugging connection test: ERROR
+17:16:56.300192 [info ]: Finished debugging [  0.17s]
+17:16:56.300236 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `bigquery` adapter.
+The following error was returned:
+
+[BigQuery] bigquery: constructing client: credentials: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+17:16:56.753633 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' with 1 error for target 'dev' [624ms]
+==================== 2026-10-05T17:17:18.125832Z | 01a10d11-e1ad-77a1-9942-f8e0657547ce ====================
+17:17:18.125933 [info ]: dbt 2.0.6
+17:17:18.126042 [info ]: Started loading project
+17:17:18.126602 [info ]: Loading dbt/profiles.yml
+17:17:18.127079 [info ]: Finished loading project [  0.00s]
+17:17:18.127134 [info ]: Started debugging
+17:17:18.127161 [info ]: Debugging profile: dev
+17:17:18.127180 [info ]: Debugging dbt version: 2.0.6
+17:17:18.127192 [info ]: Debugging platform: macos aarch64 (unix)
+17:17:18.127205 [info ]: Debugging adapter type: bigquery (remote)
+17:17:18.150764 [info ]: Debugging dependencies:
+  git: OK
+17:17:18.150839 [info ]: Debugging connection:
+  "database": "thcanalyticsinsights",
+  "schema": "thcanalyticsinsights_dev_1",
+  "timeout_seconds": 300,
+  "method": "oauth",
+  "location": "EU",
+  "dataproc_batch": null
+17:17:18.150964 [debug]: BigQuery driver resolved: bigquery 0.21.0.dev+dbt0.21.19
+17:17:18.301439 [info ]: Debugging connection test: ERROR
+17:17:18.301493 [info ]: Finished debugging [  0.17s]
+17:17:18.301535 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `bigquery` adapter.
+The following error was returned:
+
+[BigQuery] bigquery: constructing client: credentials: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+17:17:18.757229 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' with 1 error for target 'dev' [631ms]
+==================== 2026-10-05T17:17:32.004064Z | 01a10d12-17e3-74a2-8753-5c71a2013f0c ====================
+17:17:32.004145 [info ]: dbt 2.0.6
+17:17:32.004245 [info ]: Started loading project
+17:17:32.004760 [info ]: Loading dbt/profiles.yml
+17:17:32.005390 [info ]: Finished loading project [  0.00s]
+17:17:32.005467 [info ]: Started debugging
+17:17:32.005503 [info ]: Debugging profile: dev
+17:17:32.005522 [info ]: Debugging dbt version: 2.0.6
+17:17:32.005534 [info ]: Debugging platform: macos aarch64 (unix)
+17:17:32.005547 [info ]: Debugging adapter type: bigquery (remote)
+17:17:32.022497 [info ]: Debugging dependencies:
+  git: OK
+17:17:32.022584 [info ]: Debugging connection:
+  "database": "thcanalyticsinsights",
+  "schema": "thcanalyticsinsights_dev_1",
+  "timeout_seconds": 300,
+  "method": "oauth",
+  "location": "EU",
+  "dataproc_batch": null
+17:17:32.022711 [debug]: BigQuery driver resolved: bigquery 0.21.0.dev+dbt0.21.19
+17:17:32.139556 [info ]: Debugging connection test: ERROR
+17:17:32.139605 [info ]: Finished debugging [  0.13s]
+17:17:32.139651 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `bigquery` adapter.
+The following error was returned:
+
+[BigQuery] bigquery: constructing client: credentials: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+17:17:32.635794 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' with 1 error for target 'dev' [631ms]
+==================== 2026-10-05T17:19:21.381445Z | 01a10d13-c317-73c2-99c4-e71cda585eb4 ====================
+17:19:21.383431 [info ]: dbt 2.0.6
+17:19:21.386115 [info ]: Started loading project
+17:19:21.405093 [info ]: Loading dbt/profiles.yml
+17:19:21.414393 [info ]: Finished loading project [  0.03s]
+17:19:21.416157 [info ]: Started debugging
+17:19:21.416984 [info ]: Debugging profile: dev
+17:19:21.417000 [info ]: Debugging dbt version: 2.0.6
+17:19:21.417157 [info ]: Debugging platform: macos aarch64 (unix)
+17:19:21.417470 [info ]: Debugging adapter type: bigquery (remote)
+17:19:21.449747 [info ]: Debugging dependencies:
+  git: OK
+17:19:21.452932 [info ]: Debugging connection:
+  "database": "thcanalyticsinsights",
+  "schema": "thcanalyticsinsights_dev_1",
+  "timeout_seconds": 300,
+  "method": "oauth",
+  "location": "EU",
+  "dataproc_batch": null
+17:19:21.459382 [debug]: BigQuery driver resolved: bigquery 0.21.0.dev+dbt0.21.19
+17:19:21.650910 [info ]: Debugging connection test: ERROR
+17:19:21.651305 [info ]: Finished debugging [  0.24s]
+17:19:21.652309 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `bigquery` adapter.
+The following error was returned:
+
+[BigQuery] bigquery: constructing client: credentials: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+17:19:22.176620 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' with 1 error for target 'dev' [795ms]
+==================== 2026-10-06T08:36:21.994209Z | 01a1105b-4f51-74e0-bdc7-e3981977768d ====================
+08:36:21.998541 [info ]: dbt 2.0.6
+08:36:22.002620 [info ]: Started loading project
+08:36:22.023929 [info ]: Loading dbt/profiles.yml
+08:36:22.034280 [info ]: Finished loading project [  0.03s]
+08:36:22.039591 [info ]: Started debugging
+08:36:22.043178 [info ]: Debugging profile: dev
+08:36:22.043211 [info ]: Debugging dbt version: 2.0.6
+08:36:22.043372 [info ]: Debugging platform: macos aarch64 (unix)
+08:36:22.043692 [info ]: Debugging adapter type: bigquery (remote)
+08:36:22.088356 [info ]: Debugging dependencies:
+  git: OK
+08:36:22.091710 [info ]: Debugging connection:
+  "database": "thcanalyticsinsights",
+  "schema": "thcanalyticsinsights_dev_1",
+  "timeout_seconds": 300,
+  "method": "oauth",
+  "location": "EU",
+  "dataproc_batch": null
+08:36:22.098194 [debug]: BigQuery driver resolved: bigquery 0.21.0.dev+dbt0.21.19
+08:36:22.213250 [info ]: Debugging connection test: ERROR
+08:36:22.213837 [info ]: Finished debugging [  0.17s]
+08:36:22.214562 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `bigquery` adapter.
+The following error was returned:
+
+[BigQuery] bigquery: constructing client: credentials: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+08:36:22.788826 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' with 1 error for target 'dev' [794ms]
+==================== 2026-10-06T08:38:00.512385Z | 01a1105c-d03f-7ff2-95fb-fd5cb19e321a ====================
+08:38:00.512463 [info ]: dbt 2.0.6
+08:38:00.512562 [info ]: Started loading project
+08:38:00.513076 [info ]: Loading dbt/profiles.yml
+08:38:00.514197 [info ]: Finished loading project [  0.00s]
+08:38:00.514255 [info ]: Started debugging
+08:38:00.514281 [info ]: Debugging profile: dev
+08:38:00.514299 [info ]: Debugging dbt version: 2.0.6
+08:38:00.514310 [info ]: Debugging platform: macos aarch64 (unix)
+08:38:00.514322 [info ]: Debugging adapter type: bigquery (remote)
+08:38:00.540724 [info ]: Debugging dependencies:
+  git: OK
+08:38:00.540788 [info ]: Debugging connection:
+  "database": "thcanalyticsinsights",
+  "schema": "thcanalyticsinsights_dev_1",
+  "timeout_seconds": 300,
+  "method": "oauth",
+  "location": "EU",
+  "dataproc_batch": null
+08:38:00.540921 [debug]: BigQuery driver resolved: bigquery 0.21.0.dev+dbt0.21.19
+08:38:00.668902 [info ]: Debugging connection test: ERROR
+08:38:00.668955 [info ]: Finished debugging [  0.15s]
+08:38:00.669001 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `bigquery` adapter.
+The following error was returned:
+
+[BigQuery] bigquery: constructing client: open /Users/hugoboudet/.config/gcloud/application_default_credentials.json: no such file or directory
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+08:38:01.176883 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' with 1 error for target 'dev' [664ms]
+==================== 2026-10-06T08:43:17.054276Z | 01a11061-a4b0-71f0-a5c0-c448a56dc3d9 ====================
+08:43:17.057189 [info ]: dbt 2.0.6
+08:43:17.060132 [info ]: Started loading project
+08:43:17.077210 [info ]: Loading dbt/profiles.yml
+08:43:17.087122 [info ]: Finished loading project [  0.03s]
+08:43:17.088599 [info ]: Started debugging
+08:43:17.089222 [info ]: Debugging profile: dev
+08:43:17.089237 [info ]: Debugging dbt version: 2.0.6
+08:43:17.089399 [info ]: Debugging platform: macos aarch64 (unix)
+08:43:17.089901 [info ]: Debugging adapter type: bigquery (remote)
+08:43:17.129695 [info ]: Debugging dependencies:
+  git: OK
+08:43:17.132310 [info ]: Debugging connection:
+  "database": "thcanalyticsinsights",
+  "schema": "thcanalyticsinsights_dev_1",
+  "timeout_seconds": 300,
+  "method": "oauth",
+  "location": "EU",
+  "dataproc_batch": null
+08:43:17.138083 [debug]: BigQuery driver resolved: bigquery 0.21.0.dev+dbt0.21.19
+08:43:17.258046 [debug]: borrow_tlocal_connection() took 121.970583ms
+08:43:17.261382 [debug]: create_debug_span(...).entered() took 665.459µs
+08:43:19.101351 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.839567083s
+08:43:19.101368 [debug]: reader.schema() took 250ns
+08:43:19.491994 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.230519416s
+08:43:19.494278 [debug]: concat_batches + normalize_result_column_names took 2.212292ms
+08:43:19.495240 [debug]: record_current_span_status_from_attrs took 929.5µs
+08:43:19.495704 [debug]: Query executed on node unknown:
+select 1 as id
+08:43:19.496023 [debug]: drop(query_span_guard) (span exit/export) took 752.125µs
+08:43:19.500904 [debug]: adapter.execute() (full call, incl. adbc_execute_with_options) took 2.242781458s
+08:43:19.502130 [info ]: Debugging connection test: OK (2.4s)
+08:43:19.504683 [info ]: Debugged All checks passed!
+08:43:19.504785 [info ]: Finished debugging [  2.42s]
+08:43:19.550919 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' successfully for target 'dev' [2.5s]

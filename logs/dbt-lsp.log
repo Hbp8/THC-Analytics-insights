@@ -1,0 +1,106 @@
+==================== 2026-10-05T17:05:24.433671Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-05T17:05:24.438473Z | 90c32b4f-5bd1-4d15-85c4-e4e246a3dbf8 ====================
+17:05:24.439019 [info ]: Starting dbt LSP server
+17:05:24.439535 [info ]: Connecting to LSP client on port 8000
+17:05:24.440176 [info ]: Successfully connected to LSP client
+17:05:24.440196 [info ]: Creating LSP service...
+17:05:24.445938 [info ]: Creating LSP server...
+17:05:24.445949 [info ]: Starting LSP server...
+17:05:24.480165 [info ]: Loading ~/.dbt/profiles.yml
+17:05:24.875710 [info ]: Loading ~/.dbt/profiles.yml
+17:05:33.179097 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-10-05T17:08:01.888840Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-05T17:08:01.889319Z | 5f803cda-ba98-41fd-b619-0babde0c4d0a ====================
+17:08:01.889337 [info ]: Starting dbt LSP server
+17:08:01.889348 [info ]: Connecting to LSP client on port 8000
+17:08:01.889756 [info ]: Successfully connected to LSP client
+17:08:01.889767 [info ]: Creating LSP service...
+17:08:01.890656 [info ]: Creating LSP server...
+17:08:01.890667 [info ]: Starting LSP server...
+17:08:01.925624 [info ]: Loading ~/.dbt/profiles.yml
+17:08:03.202707 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-05T17:08:03.444247Z | 061dddb0-0bbf-42bf-8680-c2b047042f79 ====================
+17:08:03.444691 [info ]: Started loading project
+17:08:03.446527 [info ]: Loading ~/.dbt/profiles.yml
+17:08:04.147284 [debug]:    Started loading packages
+17:08:04.148894 [debug]:     Loaded [  0.00s] packages
+17:08:04.152538 [info ]: Finished loading project [  0.71s]
+17:08:04.154819 [info ]: Started parsing
+17:08:04.797627 [info ]: Finished parsing [  0.64s]
+17:08:04.803687 [info ]: Cached model count updated: 0 models (estimate)
+17:08:04.803702 [info ]: Cached model count updated: 0 models (accurate)
+17:08:04.806233 [info ]: Started scheduling
+17:08:04.817551 [info ]: Finished scheduling [  0.01s]
+17:08:04.817581 [debug]: Compilation - 0 nodes selected: {}
+17:08:04.818738 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+17:08:04.822740 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+17:08:04.823734 [info ]: Started scheduling
+17:08:04.823780 [info ]: Finished scheduling [  0.00s]
+17:08:04.843637 [info ]: Started building task graph
+17:08:04.844673 [info ]: Finished building task graph [  0.00s]
+17:08:04.915289 [info ]: Started scheduling
+17:08:04.915318 [info ]: Finished scheduling [  0.00s]
+17:08:04.915909 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [1.5s]
+17:08:04.915977 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-05T17:08:06.603449Z | d0eb3b08-be52-4166-bbab-ff1afb7a9bd5 ====================
+17:08:06.603590 [info ]: Started loading project
+17:08:06.603955 [info ]: Loading ~/.dbt/profiles.yml
+17:08:06.614125 [info ]: Finished loading project [  0.01s]
+17:08:06.633759 [info ]: Cached model count updated: 0 models (estimate)
+17:08:06.633796 [info ]: Cached model count updated: 0 models (accurate)
+17:08:06.633818 [info ]: Started scheduling
+17:08:06.633852 [info ]: Finished scheduling [  0.00s]
+17:08:06.633862 [debug]: Compilation - 0 nodes selected: {}
+17:08:06.634069 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+17:08:06.635748 [info ]: Started building task graph
+17:08:06.635772 [info ]: Finished building task graph [  0.00s]
+17:08:06.642126 [info ]: Started scheduling
+17:08:06.642181 [info ]: Finished scheduling [  0.00s]
+17:08:06.642241 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [38ms]
+17:08:06.642299 [info ]: Cached model count updated: 0 models (accurate)
+17:08:48.767031 [debug]: Ignoring unsupported LSP notification
+17:10:30.738545 [debug]: Ignoring unsupported LSP notification
+17:18:38.863674 [debug]: Ignoring unsupported LSP notification
+17:18:38.878983 [debug]: Ignoring unsupported LSP notification
+17:18:38.894030 [debug]: Ignoring unsupported LSP notification
+17:18:38.911313 [debug]: Ignoring unsupported LSP notification
+17:18:49.574112 [debug]: Ignoring unsupported LSP notification
+17:18:49.577324 [debug]: Ignoring unsupported LSP notification
+17:18:49.587999 [debug]: Ignoring unsupported LSP notification
+17:18:49.615357 [debug]: Ignoring unsupported LSP notification
+17:19:13.306505 [debug]: Ignoring unsupported LSP notification
+17:19:13.317065 [debug]: Ignoring unsupported LSP notification
+17:19:13.332911 [debug]: Ignoring unsupported LSP notification
+17:19:13.351224 [debug]: Ignoring unsupported LSP notification
+17:19:15.704757 [debug]: Ignoring unsupported LSP notification
+17:19:15.720906 [debug]: Ignoring unsupported LSP notification
+17:19:15.737255 [debug]: Ignoring unsupported LSP notification
+17:19:15.754494 [debug]: Ignoring unsupported LSP notification
+08:40:19.005229 [debug]: Ignoring unsupported LSP notification
+08:40:19.016445 [debug]: Ignoring unsupported LSP notification
+08:40:19.034661 [debug]: Ignoring unsupported LSP notification
+08:40:19.053545 [debug]: Ignoring unsupported LSP notification
+08:40:47.162122 [debug]: Ignoring unsupported LSP notification
+08:40:47.176678 [debug]: Ignoring unsupported LSP notification
+08:40:47.197216 [debug]: Ignoring unsupported LSP notification
+08:40:47.226812 [debug]: Ignoring unsupported LSP notification
+08:42:24.355280 [debug]: Ignoring unsupported LSP notification
+08:42:24.370077 [debug]: Ignoring unsupported LSP notification
+08:42:24.384844 [debug]: Ignoring unsupported LSP notification
+08:42:24.402647 [debug]: Ignoring unsupported LSP notification
+08:42:47.085901 [debug]: Ignoring unsupported LSP notification
+08:42:47.096341 [debug]: Ignoring unsupported LSP notification
+08:42:47.114914 [debug]: Ignoring unsupported LSP notification
+08:42:47.132648 [debug]: Ignoring unsupported LSP notification
+08:42:55.113611 [debug]: Ignoring unsupported LSP notification
+08:42:55.131136 [debug]: Ignoring unsupported LSP notification
+08:42:55.151375 [debug]: Ignoring unsupported LSP notification
+08:42:55.171141 [debug]: Ignoring unsupported LSP notification
+08:43:02.813521 [debug]: Ignoring unsupported LSP notification
+08:43:02.842930 [debug]: Ignoring unsupported LSP notification
+08:43:02.864246 [debug]: Ignoring unsupported LSP notification
+08:43:02.904626 [debug]: Ignoring unsupported LSP notification
