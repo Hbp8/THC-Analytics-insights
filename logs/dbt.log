@@ -2955,3 +2955,964 @@ select * from renamed;
 Finished 'build' with 1 warning for target 'dev' [9.5s]
 Processed: 2 models | 11 tests
 Summary: 13 total | 13 success
+==================== 2026-10-08T09:07:18.580571Z | 01a11ac4-5bb3-7992-b804-91166f1c10d1 ====================
+09:07:18.580647 [info ]: dbt 2.0.6
+09:07:18.743435 [info ]: Loading packages.yml
+09:07:18.743469 [info ]: Installing packages
+09:07:18.775940 [info ]: Installing dbt-labs/codegen
+09:07:18.776234 [info ]: Installing dbt-labs/dbt_utils
+09:07:19.231147 [info ]:  Installed dbt-labs/codegen: 0.14.1
+09:07:19.234658 [info ]:  Installed dbt-labs/dbt_utils: 1.4.1
+09:07:19.234726 [info ]:  Installed 2 packages
+09:07:19.273035 [info ]: 
+==================== Execution Summary =====================
+Finished 'deps' successfully [692ms]
+==================== 2026-10-08T09:14:29.547611Z | 01a11aca-ef1f-7d23-8f15-856ddc11f806 ====================
+09:14:29.549079 [info ]: dbt 2.0.6
+09:14:29.550127 [info ]: Started loading project
+09:14:29.553662 [info ]: Loading ~/.dbt/profiles.yml
+09:14:29.721612 [info ]: Loading packages.yml
+09:14:29.731525 [debug]:    Started loading packages
+09:14:29.737191 [debug]:     Loaded [  0.01s] packages
+09:14:29.737766 [info ]: Finished loading project [  0.19s]
+09:14:29.738308 [info ]: Started parsing
+09:14:29.774887 [debug]: Finished parsing models/staging/_src_thc_analytics.yml [  0.00s]
+09:14:29.781612 [debug]: Finished parsing models/marts/dim_thc_analytics__sales_orders.sql [  0.00s]
+09:14:29.781963 [debug]: Finished parsing models/staging/stg_thc_analytics__orders.sql [  0.00s]
+09:14:29.782239 [debug]: Finished parsing models/staging/stg_thc_analytics__sales.sql [  0.00s]
+09:14:29.784790 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_orders_recrutement_customers_id.sql [  0.00s]
+09:14:29.785039 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_orders_recrutement_date_date.sql [  0.00s]
+09:14:29.785272 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_orders_recrutement_net_sales.sql [  0.00s]
+09:14:29.785496 [debug]: Finished parsing target/generic_tests/source_unique_thc_analytics_orders_recrutement_orders_id.sql [  0.00s]
+09:14:29.785717 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_orders_recrutement_orders_id.sql [  0.00s]
+09:14:29.785934 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_customer_id.sql [  0.00s]
+09:14:29.786148 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_date_date.sql [  0.00s]
+09:14:29.786414 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_net_sales.sql [  0.00s]
+09:14:29.786657 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_order_id.sql [  0.00s]
+09:14:29.786887 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_products_id.sql [  0.00s]
+09:14:29.787113 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_qty.sql [  0.00s]
+09:14:29.917161 [info ]: Finished parsing [  0.18s]
+09:14:29.986417 [info ]: Started scheduling
+09:14:29.986572 [info ]: Finished scheduling [  0.00s]
+09:14:29.988332 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "thcanalyticsinsights", schema: "thcanalyticsinsights_dev_1", table: "orders_recrutement" }) and interval: None
+09:14:30.044395 [info ]: Started building task graph
+09:14:30.045640 [info ]: Finished building task graph [  0.00s]
+09:14:30.071250 [debug]: BigQuery driver resolved: bigquery 0.21.0.dev+dbt0.21.19
+09:14:30.910668 [info ]: Started rendering (6 nodes)
+09:14:30.911002 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id
+09:14:30.911041 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id
+09:14:30.911106 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id
+09:14:30.911120 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id
+09:14:30.911148 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales
+09:14:30.911163 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales
+09:14:30.911191 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date
+09:14:30.911204 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date
+09:14:30.911229 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id
+09:14:30.911241 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id
+09:14:30.911331 [info ]: Started model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+09:14:30.911351 [debug]: Started rendering model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+09:14:30.935787 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5 at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_orders_recrutement_net_sales.sql
+09:14:30.935814 [debug]: Compiled SQL for node test.thc_analytics.source_unique_thc_analytics_orders_recrutement_orders_id.7b5c8873bf at target/compiled/thc_analytics/target/generic_tests/source_unique_thc_analytics_orders_recrutement_orders_id.sql
+09:14:30.935787 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88 at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_orders_recrutement_orders_id.sql
+09:14:30.935830 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377 at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_orders_recrutement_date_date.sql
+09:14:30.936017 [debug]: Finished rendering [  0.02s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id [success]
+09:14:30.936167 [info ]: Started analyzing (6 nodes)
+09:14:30.936220 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id
+09:14:30.936251 [debug]: Finished rendering [  0.03s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date [success]
+09:14:30.936299 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date
+09:14:30.936319 [debug]: Finished rendering [  0.03s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales [success]
+09:14:30.936359 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales
+09:14:30.936373 [debug]: Finished rendering [  0.03s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id [success]
+09:14:30.936420 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id
+09:14:30.936576 [debug]: Compiled SQL for node model.thc_analytics.stg_thc_analytics__orders at target/compiled/thc_analytics/models/staging/stg_thc_analytics__orders.sql
+09:14:30.936722 [debug]: Finished rendering [  0.03s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orders [success]
+09:14:30.936781 [debug]: Started analyzing model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+09:14:30.937340 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_customers_id.f883863368 at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_orders_recrutement_customers_id.sql
+09:14:30.937453 [debug]: Finished rendering [  0.03s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id [success]
+09:14:30.937488 [info ]: Finished rendering [  0.03s] (6 nodes, 0 skipped, 0 errors)
+09:14:30.937525 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id
+09:14:30.944723 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date [success]
+09:14:30.944808 [info ]: Started running (6 nodes)
+09:14:30.944842 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date
+09:14:30.944862 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id [success]
+09:14:30.944904 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id
+09:14:30.944916 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id [success]
+09:14:30.944950 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id
+09:14:30.944961 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales [success]
+09:14:30.944992 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales
+09:14:30.945713 [debug]: Finished analyzing [  0.01s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orders [success]
+09:14:30.946159 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id [success]
+09:14:30.946195 [info ]: Finished analyzing [  0.01s] (6 nodes, 0 skipped, 0 errors)
+09:14:30.946226 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id
+09:14:30.949215 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5"
+09:14:30.949225 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88"
+09:14:30.949232 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_customers_id.f883863368"
+09:14:30.949237 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377"
+09:14:30.952165 [debug]: create_debug_span(...).entered() took 20.166µs
+09:14:30.952165 [debug]: create_debug_span(...).entered() took 15.584µs
+09:14:30.952165 [debug]: create_debug_span(...).entered() took 27.584µs
+09:14:30.952165 [debug]: create_debug_span(...).entered() took 23.792µs
+09:14:32.575902 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.623679s
+09:14:32.575948 [debug]: reader.schema() took 500ns
+09:14:32.673675 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.721431458s
+09:14:32.673740 [debug]: reader.schema() took 666ns
+09:14:33.047798 [debug]: batch-consume loop (for res in reader) took 471.816208ms
+09:14:33.049851 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.097669333s
+09:14:33.049888 [debug]: concat_batches + normalize_result_column_names took 11.042µs
+09:14:33.050239 [debug]: record_current_span_status_from_attrs took 339.208µs
+09:14:33.050495 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select net_sales
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+where net_sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:14:33.050541 [debug]: drop(query_span_guard) (span exit/export) took 285.958µs
+09:14:33.054246 [info ]: Finished running [  2.11s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales [pass]
+09:14:33.054422 [info ]:     Passed test  source_not_null_thc_analytics_orders_recrutement_net_sales [3 of 6 in 2.14s]
+09:14:33.057094 [debug]: Writing runtime sql for node "test.thc_analytics.source_unique_thc_analytics_orders_recrutement_orders_id.7b5c8873bf"
+09:14:33.058770 [debug]: create_debug_span(...).entered() took 56.5µs
+09:14:33.128414 [debug]: batch-consume loop (for res in reader) took 454.643959ms
+09:14:33.130003 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.177816875s
+09:14:33.130037 [debug]: concat_batches + normalize_result_column_names took 7.709µs
+09:14:33.130051 [debug]: record_current_span_status_from_attrs took 5µs
+09:14:33.130065 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_date
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+where date_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:14:33.130108 [debug]: drop(query_span_guard) (span exit/export) took 48.417µs
+09:14:33.130635 [info ]: Finished running [  2.19s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date [pass]
+09:14:33.130751 [info ]:     Passed test  source_not_null_thc_analytics_orders_recrutement_date_date [4 of 6 in 2.22s]
+09:14:33.319175 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 2.366948208s
+09:14:33.319253 [debug]: reader.schema() took 666ns
+09:14:33.506362 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 2.554124875s
+09:14:33.506402 [debug]: reader.schema() took 625ns
+09:14:33.816140 [debug]: batch-consume loop (for res in reader) took 496.841083ms
+09:14:33.818398 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.866212792s
+09:14:33.818444 [debug]: concat_batches + normalize_result_column_names took 9.917µs
+09:14:33.818462 [debug]: record_current_span_status_from_attrs took 7.292µs
+09:14:33.818479 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_customers_id.f883863368:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_customers_id.f883863368", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customers_id
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+where customers_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:14:33.818527 [debug]: drop(query_span_guard) (span exit/export) took 56.291µs
+09:14:33.819470 [info ]: Finished running [  2.87s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id [pass]
+09:14:33.819563 [info ]:     Passed test  source_not_null_thc_analytics_orders_recrutement_customers_id [5 of 6 in 2.91s]
+09:14:34.070687 [debug]: batch-consume loop (for res in reader) took 564.253416ms
+09:14:34.074157 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 3.121937417s
+09:14:34.074214 [debug]: concat_batches + normalize_result_column_names took 17.333µs
+09:14:34.074236 [debug]: record_current_span_status_from_attrs took 10.834µs
+09:14:34.074330 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select orders_id
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+where orders_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:14:34.074419 [debug]: drop(query_span_guard) (span exit/export) took 171.917µs
+09:14:34.075533 [info ]: Finished running [  3.13s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id [pass]
+09:14:34.075618 [info ]:     Passed test  source_not_null_thc_analytics_orders_recrutement_orders_id [2 of 6 in 3.16s]
+09:14:34.800116 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.74122275s
+09:14:34.800203 [debug]: reader.schema() took 750ns
+09:14:35.190231 [debug]: batch-consume loop (for res in reader) took 389.973625ms
+09:14:35.192327 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.133513s
+09:14:35.192384 [debug]: concat_batches + normalize_result_column_names took 17.917µs
+09:14:35.192403 [debug]: record_current_span_status_from_attrs took 9.5µs
+09:14:35.192424 [debug]: Query executed on node test.thc_analytics.source_unique_thc_analytics_orders_recrutement_orders_id.7b5c8873bf:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_unique_thc_analytics_orders_recrutement_orders_id.7b5c8873bf", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select orders_id as unique_field
+  from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+  where orders_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:14:35.192482 [debug]: drop(query_span_guard) (span exit/export) took 69.209µs
+09:14:35.193416 [info ]: Finished running [  4.25s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id [pass]
+09:14:35.193562 [info ]:     Passed test  source_unique_thc_analytics_orders_recrutement_orders_id [1 of 6 in 4.28s]
+09:14:35.193671 [info ]: Started running model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+09:14:36.093052 [debug]: Writing runtime sql for node "model.thc_analytics.stg_thc_analytics__orders"
+09:14:36.094401 [debug]: create_debug_span(...).entered() took 15.542µs
+09:14:37.922324 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.827847625s
+09:14:37.922385 [debug]: reader.schema() took 666ns
+09:14:37.929612 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.835159375s
+09:14:37.929689 [debug]: concat_batches + normalize_result_column_names took 20.667µs
+09:14:37.929710 [debug]: record_current_span_status_from_attrs took 10.25µs
+09:14:37.929731 [debug]: Query executed on node model.thc_analytics.stg_thc_analytics__orders:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.thc_analytics.stg_thc_analytics__orders", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+
+  create or replace view `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`stg_thc_analytics__orders`
+  OPTIONS()
+  as with
+    source as (
+        select
+            *
+        from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+    ),
+    renamed as (
+        select
+            orders_id as orders_id,
+            customers_id as customer_id,
+            date_date as order_date,
+            net_sales as net_sales_amount
+        from source
+    )
+select * from renamed;
+
+
+09:14:37.929787 [debug]: drop(query_span_guard) (span exit/export) took 66.75µs
+09:14:37.934345 [info ]: Finished running [  2.74s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orders [success]
+09:14:37.934419 [info ]: Finished running [  6.99s] (6 nodes, 0 skipped, 0 errors)
+09:14:37.934481 [info ]:  Succeeded model thcanalyticsinsights_dev_1.stg_thc_analytics__orders (view) [6 of 6 in 2.77s]
+09:14:38.054958 [info ]: 
+==================== Execution Summary =====================
+Finished 'build' successfully for target 'dev' [8.5s]
+Processed: 1 model | 5 tests
+Summary: 6 total | 6 success
+==================== 2026-10-08T09:40:32.898184Z | 01a11ae2-c9fe-7bc3-951a-69fde6517f26 ====================
+09:40:32.899001 [info ]: dbt 2.0.6
+09:40:32.899968 [info ]: Started loading project
+09:40:32.901669 [info ]: Loading ~/.dbt/profiles.yml
+09:40:32.909799 [info ]: Loading packages.yml
+09:40:32.910409 [debug]:    Started loading packages
+09:40:32.912926 [debug]:     Loaded [  0.00s] packages
+09:40:32.913534 [info ]: Finished loading project [  0.01s]
+09:40:32.913933 [info ]: Started parsing
+09:40:32.946202 [debug]: Finished parsing models/staging/_src_thc_analytics.yml [  0.00s]
+09:40:32.951738 [debug]: Finished parsing models/marts/dim_thc_analytics__sales_orders.sql [  0.00s]
+09:40:32.952050 [debug]: Finished parsing models/staging/stg_thc_analytics__orders.sql [  0.00s]
+09:40:32.952412 [debug]: Finished parsing models/staging/stg_thc_analytics__sales.sql [  0.00s]
+09:40:32.954056 [debug]: Finished parsing tests/assert_orders_amount_positive.sql [  0.00s]
+09:40:32.954304 [debug]: Finished parsing tests/assert_sales_amout_positive.sql [  0.00s]
+09:40:32.954573 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_orders_recrutement_customers_id.sql [  0.00s]
+09:40:32.954806 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_orders_recrutement_date_date.sql [  0.00s]
+09:40:32.955029 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_orders_recrutement_net_sales.sql [  0.00s]
+09:40:32.955243 [debug]: Finished parsing target/generic_tests/source_unique_thc_analytics_orders_recrutement_orders_id.sql [  0.00s]
+09:40:32.955461 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_orders_recrutement_orders_id.sql [  0.00s]
+09:40:32.955675 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_customer_id.sql [  0.00s]
+09:40:32.955886 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_date_date.sql [  0.00s]
+09:40:32.956095 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_net_sales.sql [  0.00s]
+09:40:32.956304 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_order_id.sql [  0.00s]
+09:40:32.956513 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_products_id.sql [  0.00s]
+09:40:32.956720 [debug]: Finished parsing target/generic_tests/source_not_null_thc_analytics_sales_recrutement_qty.sql [  0.00s]
+09:40:33.083751 [info ]: Finished parsing [  0.17s]
+09:40:33.086188 [info ]: Started scheduling
+09:40:33.086397 [info ]: Finished scheduling [  0.00s]
+09:40:33.087202 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "thcanalyticsinsights", schema: "thcanalyticsinsights_dev_1", table: "stg_thc_analytics__sales" }) and interval: None
+09:40:33.087215 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "thcanalyticsinsights", schema: "thcanalyticsinsights_dev_1", table: "orders_recrutement" }) and interval: None
+09:40:33.087221 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "thcanalyticsinsights", schema: "thcanalyticsinsights_dev_1", table: "sales_recrutement" }) and interval: None
+09:40:33.087225 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "thcanalyticsinsights", schema: "thcanalyticsinsights_dev_1", table: "stg_thc_analytics__orders" }) and interval: None
+09:40:33.141458 [info ]: Started building task graph
+09:40:33.142092 [info ]: Finished building task graph [  0.00s]
+09:40:33.165078 [info ]: Started rendering (13 nodes)
+09:40:33.165417 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id
+09:40:33.165429 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id
+09:40:33.165449 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_qty
+09:40:33.165456 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_qty
+09:40:33.165468 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_products_id
+09:40:33.165475 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_products_id
+09:40:33.165485 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_order_id
+09:40:33.165492 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_order_id
+09:40:33.165502 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_net_sales
+09:40:33.165506 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_net_sales
+09:40:33.165524 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_date_date
+09:40:33.165528 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_date_date
+09:40:33.165534 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_customer_id
+09:40:33.165538 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_customer_id
+09:40:33.165545 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id
+09:40:33.165549 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id
+09:40:33.165556 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales
+09:40:33.165560 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales
+09:40:33.165567 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date
+09:40:33.165571 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date
+09:40:33.165578 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id
+09:40:33.165581 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id
+09:40:33.165589 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.assert_sales_amout_positive
+09:40:33.165596 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.assert_sales_amout_positive
+09:40:33.165606 [info ]: Started test thcanalyticsinsights_dev_1_dbt_test__audit.assert_orders_amount_positive
+09:40:33.165611 [debug]: Started rendering test thcanalyticsinsights_dev_1_dbt_test__audit.assert_orders_amount_positive
+09:40:33.184439 [debug]: Compiled SQL for node test.thc_analytics.source_unique_thc_analytics_orders_recrutement_orders_id.7b5c8873bf at target/compiled/thc_analytics/target/generic_tests/source_unique_thc_analytics_orders_recrutement_orders_id.sql
+09:40:33.184430 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_qty.00213cbb80 at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_sales_recrutement_qty.sql
+09:40:33.184428 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_products_id.ff95c05cec at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_sales_recrutement_products_id.sql
+09:40:33.184493 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_order_id.f6f313bd9c at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_sales_recrutement_order_id.sql
+09:40:33.184593 [debug]: Finished rendering [  0.02s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_qty [success]
+09:40:33.184757 [info ]: Started analyzing (13 nodes)
+09:40:33.184782 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_qty
+09:40:33.184800 [debug]: Finished rendering [  0.02s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id [success]
+09:40:33.184833 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id
+09:40:33.184841 [debug]: Finished rendering [  0.02s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_products_id [success]
+09:40:33.184862 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_products_id
+09:40:33.184870 [debug]: Finished rendering [  0.02s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_order_id [success]
+09:40:33.184892 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_order_id
+09:40:33.185247 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_date_date.5bc7063436 at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_sales_recrutement_date_date.sql
+09:40:33.185250 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_net_sales.ab042483f5 at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_sales_recrutement_net_sales.sql
+09:40:33.185294 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_customer_id.ff0fa372cd at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_sales_recrutement_customer_id.sql
+09:40:33.185360 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377 at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_orders_recrutement_date_date.sql
+09:40:33.185342 [debug]: Finished rendering [  0.02s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_date_date [success]
+09:40:33.185441 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_date_date
+09:40:33.185467 [debug]: Finished rendering [  0.02s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_net_sales [success]
+09:40:33.185501 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_net_sales
+09:40:33.185509 [debug]: Finished rendering [  0.02s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_customer_id [success]
+09:40:33.185530 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_customer_id
+09:40:33.185603 [debug]: Finished rendering [  0.02s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date [success]
+09:40:33.185642 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date
+09:40:33.185782 [debug]: Compiled SQL for node test.thc_analytics.assert_sales_amout_positive at target/compiled/thc_analytics/tests/assert_sales_amout_positive.sql
+09:40:33.186058 [debug]: Compiled SQL for node test.thc_analytics.assert_orders_amount_positive at target/compiled/thc_analytics/tests/assert_orders_amount_positive.sql
+09:40:33.186206 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88 at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_orders_recrutement_orders_id.sql
+09:40:33.186315 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_customers_id.f883863368 at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_orders_recrutement_customers_id.sql
+09:40:33.186368 [debug]: Compiled SQL for node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5 at target/compiled/thc_analytics/target/generic_tests/source_not_null_thc_analytics_orders_recrutement_net_sales.sql
+09:40:33.192217 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_net_sales [success]
+09:40:33.192269 [info ]: Started running (13 nodes)
+09:40:33.192291 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_net_sales
+09:40:33.192303 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_date_date [success]
+09:40:33.192334 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_date_date
+09:40:33.192345 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_qty [success]
+09:40:33.192369 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_qty
+09:40:33.192380 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_products_id [success]
+09:40:33.192406 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_products_id
+09:40:33.192417 [debug]: Finished rendering [  0.03s] test thcanalyticsinsights_dev_1_dbt_test__audit.assert_sales_amout_positive [success]
+09:40:33.192459 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.assert_sales_amout_positive
+09:40:33.192470 [debug]: Finished rendering [  0.03s] test thcanalyticsinsights_dev_1_dbt_test__audit.assert_orders_amount_positive [success]
+09:40:33.192497 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.assert_orders_amount_positive
+09:40:33.192508 [debug]: Finished rendering [  0.03s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id [success]
+09:40:33.192529 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id
+09:40:33.192538 [debug]: Finished rendering [  0.03s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id [success]
+09:40:33.192562 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id
+09:40:33.192571 [debug]: Finished rendering [  0.03s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales [success]
+09:40:33.192602 [info ]: Finished rendering [  0.03s] (13 nodes, 0 skipped, 0 errors)
+09:40:33.192628 [debug]: Started analyzing test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales
+09:40:33.192638 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_customer_id [success]
+09:40:33.192665 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_customer_id
+09:40:33.192673 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date [success]
+09:40:33.192691 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date
+09:40:33.192698 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_order_id [success]
+09:40:33.192734 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_order_id
+09:40:33.192785 [debug]: Finished analyzing [  0.00s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id [success]
+09:40:33.192811 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id
+09:40:33.192818 [debug]: Finished analyzing [  0.01s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id [success]
+09:40:33.192833 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id
+09:40:33.193412 [debug]: Finished analyzing [  0.00s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id [success]
+09:40:33.193436 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id
+09:40:33.193448 [debug]: Finished analyzing [  0.00s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales [success]
+09:40:33.193469 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales
+09:40:33.193488 [debug]: Finished analyzing [  0.00s] test thcanalyticsinsights_dev_1_dbt_test__audit.assert_sales_amout_positive [success]
+09:40:33.193507 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.assert_sales_amout_positive
+09:40:33.193517 [debug]: Finished analyzing [  0.00s] test thcanalyticsinsights_dev_1_dbt_test__audit.assert_orders_amount_positive [success]
+09:40:33.193524 [info ]: Finished analyzing [  0.01s] (13 nodes, 0 skipped, 0 errors)
+09:40:33.193542 [info ]: Started running test thcanalyticsinsights_dev_1_dbt_test__audit.assert_orders_amount_positive
+09:40:33.198369 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_qty.00213cbb80"
+09:40:33.198367 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_customer_id.ff0fa372cd"
+09:40:33.198371 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88"
+09:40:33.198377 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_net_sales.ab042483f5"
+09:40:33.201261 [debug]: BigQuery driver resolved: bigquery 0.21.0.dev+dbt0.21.19
+09:40:33.326804 [debug]: create_debug_span(...).entered() took 214.916µs
+09:40:33.326804 [debug]: create_debug_span(...).entered() took 214.458µs
+09:40:33.326804 [debug]: create_debug_span(...).entered() took 214µs
+09:40:33.326804 [debug]: create_debug_span(...).entered() took 214.083µs
+09:40:35.278037 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.950444166s
+09:40:35.278098 [debug]: reader.schema() took 625ns
+09:40:35.505857 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 2.178288708s
+09:40:35.505904 [debug]: reader.schema() took 542ns
+09:40:35.748873 [debug]: batch-consume loop (for res in reader) took 470.743167ms
+09:40:35.751382 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.424563292s
+09:40:35.752624 [debug]: concat_batches + normalize_result_column_names took 1.191ms
+09:40:35.752884 [debug]: record_current_span_status_from_attrs took 233.583µs
+09:40:35.753487 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_net_sales.ab042483f5:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_net_sales.ab042483f5", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select net_sales
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
+where net_sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:40:35.753574 [debug]: drop(query_span_guard) (span exit/export) took 670.875µs
+09:40:35.758250 [info ]: Finished running [  2.57s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_net_sales [pass]
+09:40:35.758412 [info ]:     Passed test  source_not_null_thc_analytics_sales_recrutement_net_sales [5 of 13 in 2.59s]
+09:40:35.760851 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_order_id.f6f313bd9c"
+09:40:35.762834 [debug]: create_debug_span(...).entered() took 21.583µs
+09:40:35.918442 [debug]: batch-consume loop (for res in reader) took 412.50275ms
+09:40:35.920960 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.5941395s
+09:40:35.921011 [debug]: concat_batches + normalize_result_column_names took 16µs
+09:40:35.921032 [debug]: record_current_span_status_from_attrs took 9.959µs
+09:40:35.921056 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_customer_id.ff0fa372cd:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_customer_id.ff0fa372cd", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:40:35.921108 [debug]: drop(query_span_guard) (span exit/export) took 62.291µs
+09:40:35.922102 [info ]: Finished running [  2.73s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_customer_id [pass]
+09:40:35.922199 [info ]:     Passed test  source_not_null_thc_analytics_sales_recrutement_customer_id [7 of 13 in 2.75s]
+09:40:35.925512 [debug]: Writing runtime sql for node "test.thc_analytics.source_unique_thc_analytics_orders_recrutement_orders_id.7b5c8873bf"
+09:40:35.927620 [debug]: create_debug_span(...).entered() took 25.042µs
+09:40:35.977627 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 2.650051375s
+09:40:35.977690 [debug]: reader.schema() took 542ns
+09:40:36.526742 [debug]: batch-consume loop (for res in reader) took 549.015209ms
+09:40:36.529195 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 3.202378792s
+09:40:36.529241 [debug]: concat_batches + normalize_result_column_names took 11.167µs
+09:40:36.529259 [debug]: record_current_span_status_from_attrs took 7.917µs
+09:40:36.529276 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select orders_id
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+where orders_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:40:36.529319 [debug]: drop(query_span_guard) (span exit/export) took 50.125µs
+09:40:36.530324 [info ]: Finished running [  3.34s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_orders_id [pass]
+09:40:36.530406 [info ]:     Passed test  source_not_null_thc_analytics_orders_recrutement_orders_id [8 of 13 in 3.36s]
+09:40:36.533378 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_products_id.ff95c05cec"
+09:40:36.535404 [debug]: create_debug_span(...).entered() took 22.333µs
+09:40:37.270892 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.343115625s
+09:40:37.270977 [debug]: reader.schema() took 1µs
+09:40:37.521737 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.758784625s
+09:40:37.521817 [debug]: reader.schema() took 708ns
+09:40:37.673031 [debug]: batch-consume loop (for res in reader) took 402.004ms
+09:40:37.675531 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.747886458s
+09:40:37.675588 [debug]: concat_batches + normalize_result_column_names took 19.834µs
+09:40:37.675608 [debug]: record_current_span_status_from_attrs took 9.75µs
+09:40:37.675631 [debug]: Query executed on node test.thc_analytics.source_unique_thc_analytics_orders_recrutement_orders_id.7b5c8873bf:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_unique_thc_analytics_orders_recrutement_orders_id.7b5c8873bf", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select orders_id as unique_field
+  from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+  where orders_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:40:37.675684 [debug]: drop(query_span_guard) (span exit/export) took 65.875µs
+09:40:37.676597 [info ]: Finished running [  4.48s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_unique_thc_analytics_orders_recrutement_orders_id [pass]
+09:40:37.676768 [info ]:     Passed test  source_unique_thc_analytics_orders_recrutement_orders_id [1 of 13 in 4.51s]
+09:40:37.679680 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_date_date.5bc7063436"
+09:40:37.681459 [debug]: create_debug_span(...).entered() took 27.334µs
+09:40:37.874577 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 4.547022791s
+09:40:37.874623 [debug]: reader.schema() took 458ns
+09:40:37.893205 [debug]: batch-consume loop (for res in reader) took 371.3415ms
+09:40:37.896050 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.133185125s
+09:40:37.896143 [debug]: concat_batches + normalize_result_column_names took 21.875µs
+09:40:37.896166 [debug]: record_current_span_status_from_attrs took 12.417µs
+09:40:37.896191 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_order_id.f6f313bd9c:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_order_id.f6f313bd9c", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_id
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
+where order_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:40:37.896263 [debug]: drop(query_span_guard) (span exit/export) took 85.416µs
+09:40:37.896958 [info ]: Finished running [  4.70s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_order_id [pass]
+09:40:37.897079 [info ]:     Passed test  source_not_null_thc_analytics_sales_recrutement_order_id [4 of 13 in 4.73s]
+09:40:37.900039 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377"
+09:40:37.902447 [debug]: create_debug_span(...).entered() took 27.542µs
+09:40:38.382864 [debug]: batch-consume loop (for res in reader) took 508.196084ms
+09:40:38.385034 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 5.058224458s
+09:40:38.385075 [debug]: concat_batches + normalize_result_column_names took 10.917µs
+09:40:38.385090 [debug]: record_current_span_status_from_attrs took 6.125µs
+09:40:38.385107 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_qty.00213cbb80:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_qty.00213cbb80", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select qty
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
+where qty is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:40:38.385156 [debug]: drop(query_span_guard) (span exit/export) took 56.208µs
+09:40:38.386009 [info ]: Finished running [  5.19s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_qty [pass]
+09:40:38.386117 [info ]:     Passed test  source_not_null_thc_analytics_sales_recrutement_qty [2 of 13 in 5.22s]
+09:40:38.389808 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_customers_id.f883863368"
+09:40:38.392087 [debug]: create_debug_span(...).entered() took 36.667µs
+09:40:38.885484 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.203880416s
+09:40:38.885574 [debug]: reader.schema() took 584ns
+09:40:39.009060 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.106470916s
+09:40:39.009085 [debug]: reader.schema() took 125ns
+09:40:39.220388 [debug]: batch-consume loop (for res in reader) took 334.772208ms
+09:40:39.224398 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.542903916s
+09:40:39.224469 [debug]: concat_batches + normalize_result_column_names took 16.5µs
+09:40:39.224488 [debug]: record_current_span_status_from_attrs took 9.125µs
+09:40:39.224507 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_date_date.5bc7063436:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_date_date.5bc7063436", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_date
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
+where date_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:40:39.224554 [debug]: drop(query_span_guard) (span exit/export) took 56.917µs
+09:40:39.225409 [info ]: Finished running [  6.03s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_date_date [pass]
+09:40:39.225553 [info ]:     Passed test  source_not_null_thc_analytics_sales_recrutement_date_date [6 of 13 in 6.06s]
+09:40:39.228480 [debug]: Writing runtime sql for node "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5"
+09:40:39.230957 [debug]: create_debug_span(...).entered() took 23.166µs
+09:40:39.253215 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 2.717705875s
+09:40:39.253247 [debug]: reader.schema() took 333ns
+09:40:39.416497 [debug]: batch-consume loop (for res in reader) took 407.378042ms
+09:40:39.418943 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.516448958s
+09:40:39.418994 [debug]: concat_batches + normalize_result_column_names took 16.5µs
+09:40:39.419013 [debug]: record_current_span_status_from_attrs took 8.667µs
+09:40:39.419035 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_date
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+where date_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:40:39.419096 [debug]: drop(query_span_guard) (span exit/export) took 73.709µs
+09:40:39.419987 [info ]: Finished running [  6.23s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_date_date [pass]
+09:40:39.420134 [info ]:     Passed test  source_not_null_thc_analytics_orders_recrutement_date_date [10 of 13 in 6.25s]
+09:40:39.422906 [debug]: Writing runtime sql for node "test.thc_analytics.assert_sales_amout_positive"
+09:40:39.425053 [debug]: create_debug_span(...).entered() took 25.917µs
+09:40:39.683873 [debug]: batch-consume loop (for res in reader) took 430.590084ms
+09:40:39.686324 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 3.150898542s
+09:40:39.686365 [debug]: concat_batches + normalize_result_column_names took 11.208µs
+09:40:39.686380 [debug]: record_current_span_status_from_attrs took 6.083µs
+09:40:39.686401 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_products_id.ff95c05cec:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_products_id.ff95c05cec", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select products_id
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
+where products_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:40:39.686447 [debug]: drop(query_span_guard) (span exit/export) took 58.209µs
+09:40:39.687147 [info ]: Finished running [  6.49s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_sales_recrutement_products_id [pass]
+09:40:39.687217 [info ]:     Passed test  source_not_null_thc_analytics_sales_recrutement_products_id [3 of 13 in 6.52s]
+09:40:39.690097 [debug]: Writing runtime sql for node "test.thc_analytics.assert_orders_amount_positive"
+09:40:39.691990 [debug]: create_debug_span(...).entered() took 26.25µs
+09:40:39.735140 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.34283925s
+09:40:39.735180 [debug]: reader.schema() took 708ns
+09:40:40.126527 [debug]: batch-consume loop (for res in reader) took 391.326333ms
+09:40:40.128476 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.736360875s
+09:40:40.128505 [debug]: concat_batches + normalize_result_column_names took 8.709µs
+09:40:40.128520 [debug]: record_current_span_status_from_attrs took 5.042µs
+09:40:40.128532 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_customers_id.f883863368:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_customers_id.f883863368", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customers_id
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+where customers_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:40:40.128567 [debug]: drop(query_span_guard) (span exit/export) took 39.375µs
+09:40:40.129047 [info ]: Finished running [  6.94s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_customers_id [pass]
+09:40:40.129115 [info ]:     Passed test  source_not_null_thc_analytics_orders_recrutement_customers_id [11 of 13 in 6.96s]
+09:40:40.479267 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.24816975s
+09:40:40.479342 [debug]: reader.schema() took 458ns
+09:40:40.761205 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.336042625s
+09:40:40.761306 [debug]: reader.schema() took 542ns
+09:40:40.797673 [debug]: batch-consume loop (for res in reader) took 318.303666ms
+09:40:40.799590 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.568591916s
+09:40:40.799635 [debug]: concat_batches + normalize_result_column_names took 13.625µs
+09:40:40.799652 [debug]: record_current_span_status_from_attrs took 9.583µs
+09:40:40.799669 [debug]: Query executed on node test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select net_sales
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+where net_sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+09:40:40.799730 [debug]: drop(query_span_guard) (span exit/export) took 71.375µs
+09:40:40.800600 [info ]: Finished running [  7.61s] test thcanalyticsinsights_dev_1_dbt_test__audit.source_not_null_thc_analytics_orders_recrutement_net_sales [pass]
+09:40:40.800709 [info ]:     Passed test  source_not_null_thc_analytics_orders_recrutement_net_sales [9 of 13 in 7.63s]
+09:40:41.070714 [debug]: batch-consume loop (for res in reader) took 309.376541ms
+09:40:41.071585 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 1.646511666s
+09:40:41.071603 [debug]: concat_batches + normalize_result_column_names took 4.458µs
+09:40:41.071610 [debug]: record_current_span_status_from_attrs took 2.667µs
+09:40:41.071617 [debug]: Query executed on node test.thc_analytics.assert_sales_amout_positive:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.assert_sales_amout_positive", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    order_id,
+    customer_id,
+    sum(sales_amount) as total_sales_amount
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`stg_thc_analytics__sales`
+group by order_id, customer_id
+having sum(sales_amount) < 0
+  
+  
+      
+    ) dbt_internal_test
+09:40:41.071637 [debug]: drop(query_span_guard) (span exit/export) took 22.792µs
+09:40:41.071860 [info ]: Finished running [  7.88s] test thcanalyticsinsights_dev_1_dbt_test__audit.assert_sales_amout_positive [pass]
+09:40:41.071906 [info ]:     Passed test  assert_sales_amout_positive [12 of 13 in 7.91s]
+09:40:41.363106 [debug]: stmt.execute() (submit+wait_for_completion, returns reader) took 1.670966667s
+09:40:41.363168 [debug]: reader.schema() took 833ns
+09:40:41.700537 [debug]: batch-consume loop (for res in reader) took 337.331917ms
+09:40:41.702852 [debug]: do_execute(conn) (closure: stmt.execute + schema + batch loop) took 2.010838625s
+09:40:41.702894 [debug]: concat_batches + normalize_result_column_names took 10.5µs
+09:40:41.702909 [debug]: record_current_span_status_from_attrs took 6µs
+09:40:41.702927 [debug]: Query executed on node test.thc_analytics.assert_orders_amount_positive:
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.assert_orders_amount_positive", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    orders_id,
+    customer_id,
+    sum(net_sales_amount) as total_net_sales_amount
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`stg_thc_analytics__orders`
+group by orders_id, customer_id
+having sum(net_sales_amount) < 0
+  
+  
+      
+    ) dbt_internal_test
+09:40:41.702967 [debug]: drop(query_span_guard) (span exit/export) took 48.625µs
+09:40:41.703763 [info ]: Finished running [  8.51s] test thcanalyticsinsights_dev_1_dbt_test__audit.assert_orders_amount_positive [pass]
+09:40:41.703894 [info ]: Finished running [  8.51s] (13 nodes, 0 skipped, 0 errors)
+09:40:41.703966 [info ]:     Passed test  assert_orders_amount_positive [13 of 13 in 8.54s]
+09:40:41.784777 [info ]: 
+==================== Execution Summary =====================
+Finished 'test' successfully for target 'dev' [8.9s]
+Processed: 13 tests
+Summary: 13 total | 13 success

@@ -9,7 +9,7 @@ with
             orders_id as orders_id,
             customers_id as customer_id,
             date_date as order_date,
-            net_sales as net_sales_amount
+            {{ round_cents('net_sales') }} as net_sales_amount
         from source
     )
 select * from renamed
