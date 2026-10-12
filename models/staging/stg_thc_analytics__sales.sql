@@ -11,7 +11,7 @@ with
             date_date as sale_date,
             customer_id,
             products_id,
-            net_sales as sales_amount,
+            {{ round_cents('net_sales') }} as sales_amount,
             qty as sale_product_quantity
         from source
     )
