@@ -1,10 +1,10 @@
--- created_at: 2026-10-12T15:48:10.865420+00:00
--- finished_at: 2026-10-12T15:48:12.807189+00:00
--- elapsed: 1.9s
+-- created_at: 2026-10-12T15:55:40.112031+00:00
+-- finished_at: 2026-10-12T15:55:41.838490+00:00
+-- elapsed: 1.7s
 -- outcome: success
 -- dialect: bigquery
 -- node_id: test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_order_id.f6f313bd9c
--- query_id: adbc-16d97178-8dbb-4781-87ad-e63ecb1ff7c0
+-- query_id: adbc-6258103d-fd59-4f96-b099-9b2ee122f558
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_order_id.f6f313bd9c", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -33,118 +33,13 @@ where order_id is null
       
     ) dbt_internal_test;
 
--- created_at: 2026-10-12T15:48:10.865762+00:00
--- finished_at: 2026-10-12T15:48:12.812234+00:00
+-- created_at: 2026-10-12T15:55:40.113985+00:00
+-- finished_at: 2026-10-12T15:55:42.005163+00:00
 -- elapsed: 1.9s
 -- outcome: success
 -- dialect: bigquery
--- node_id: test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_products_id.ff95c05cec
--- query_id: adbc-2ade736e-6d4e-4b69-a169-69fecbe4061f
--- desc: execute adapter call
-/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_products_id.ff95c05cec", "profile_name": "thc_analytics", "target_name": "dev"} */
-
-    
-    select
-      count(*) as failures,
-      count(*) != 0 as should_warn,
-      count(*) != 0 as should_error
-    from (
-      
-    
-  
-    
-    
-
-
-
-select products_id
-from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
-where products_id is null
-
-
-
-  
-  
-      
-    ) dbt_internal_test;
-
--- created_at: 2026-10-12T15:48:10.865819+00:00
--- finished_at: 2026-10-12T15:48:12.863065+00:00
--- elapsed: 2.0s
--- outcome: success
--- dialect: bigquery
--- node_id: test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88
--- query_id: adbc-8aa51def-27a6-473a-a3bc-4af9fd1969b5
--- desc: execute adapter call
-/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88", "profile_name": "thc_analytics", "target_name": "dev"} */
-
-    
-    select
-      count(*) as failures,
-      count(*) != 0 as should_warn,
-      count(*) != 0 as should_error
-    from (
-      
-    
-  
-    
-    
-
-
-
-select orders_id
-from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
-where orders_id is null
-
-
-
-  
-  
-      
-    ) dbt_internal_test;
-
--- created_at: 2026-10-12T15:48:10.866279+00:00
--- finished_at: 2026-10-12T15:48:13.026854+00:00
--- elapsed: 2.2s
--- outcome: success
--- dialect: bigquery
--- node_id: test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_net_sales.ab042483f5
--- query_id: adbc-0d6f9d02-fb54-4203-85f4-1a7e0faf7c1d
--- desc: execute adapter call
-/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_net_sales.ab042483f5", "profile_name": "thc_analytics", "target_name": "dev"} */
-
-    
-    select
-      count(*) as failures,
-      count(*) != 0 as should_warn,
-      count(*) != 0 as should_error
-    from (
-      
-    
-  
-    
-    
-
-
-
-select net_sales
-from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
-where net_sales is null
-
-
-
-  
-  
-      
-    ) dbt_internal_test;
-
--- created_at: 2026-10-12T15:48:12.813928+00:00
--- finished_at: 2026-10-12T15:48:14.494045+00:00
--- elapsed: 1.7s
--- outcome: success
--- dialect: bigquery
 -- node_id: test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_customer_id.ff0fa372cd
--- query_id: adbc-531e7f13-b8b2-4073-809c-99ff95d1ff95
+-- query_id: adbc-e6609916-0a16-4e3b-be64-07423e20c534
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_customer_id.ff0fa372cd", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -173,15 +68,15 @@ where customer_id is null
       
     ) dbt_internal_test;
 
--- created_at: 2026-10-12T15:48:12.866754+00:00
--- finished_at: 2026-10-12T15:48:14.550490+00:00
--- elapsed: 1.7s
+-- created_at: 2026-10-12T15:55:40.113101+00:00
+-- finished_at: 2026-10-12T15:55:42.030035+00:00
+-- elapsed: 1.9s
 -- outcome: success
 -- dialect: bigquery
--- node_id: test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_qty.00213cbb80
--- query_id: adbc-9d5fee26-d400-4ade-85c2-5935c1dce629
+-- node_id: test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88
+-- query_id: adbc-fdbfa004-3c16-4ac1-bdb6-b17e66d73d9a
 -- desc: execute adapter call
-/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_qty.00213cbb80", "profile_name": "thc_analytics", "target_name": "dev"} */
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_orders_id.f07cb7bb88", "profile_name": "thc_analytics", "target_name": "dev"} */
 
     
     select
@@ -197,9 +92,9 @@ where customer_id is null
 
 
 
-select qty
-from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
-where qty is null
+select orders_id
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+where orders_id is null
 
 
 
@@ -208,13 +103,83 @@ where qty is null
       
     ) dbt_internal_test;
 
--- created_at: 2026-10-12T15:48:12.815796+00:00
--- finished_at: 2026-10-12T15:48:14.592667+00:00
+-- created_at: 2026-10-12T15:55:40.113322+00:00
+-- finished_at: 2026-10-12T15:55:42.042525+00:00
+-- elapsed: 1.9s
+-- outcome: success
+-- dialect: bigquery
+-- node_id: test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_products_id.ff95c05cec
+-- query_id: adbc-d0e24dce-e879-4b30-8a77-697490ec8875
+-- desc: execute adapter call
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_products_id.ff95c05cec", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select products_id
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
+where products_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test;
+
+-- created_at: 2026-10-12T15:55:41.841707+00:00
+-- finished_at: 2026-10-12T15:55:43.664055+00:00
 -- elapsed: 1.8s
 -- outcome: success
 -- dialect: bigquery
+-- node_id: test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_net_sales.ab042483f5
+-- query_id: adbc-3b9c10bb-c1a9-4867-a1e4-31a591566810
+-- desc: execute adapter call
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_net_sales.ab042483f5", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select net_sales
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
+where net_sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test;
+
+-- created_at: 2026-10-12T15:55:42.034039+00:00
+-- finished_at: 2026-10-12T15:55:43.673422+00:00
+-- elapsed: 1.6s
+-- outcome: success
+-- dialect: bigquery
 -- node_id: test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_date_date.5bc7063436
--- query_id: adbc-2130e7c6-5cd5-45cd-bcc7-f319c30ad06c
+-- query_id: adbc-75bbbc16-c3d6-4580-aeda-8598dbad4918
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_date_date.5bc7063436", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -243,13 +208,118 @@ where date_date is null
       
     ) dbt_internal_test;
 
--- created_at: 2026-10-12T15:48:13.033084+00:00
--- finished_at: 2026-10-12T15:48:14.851099+00:00
+-- created_at: 2026-10-12T15:55:42.010205+00:00
+-- finished_at: 2026-10-12T15:55:43.840057+00:00
 -- elapsed: 1.8s
 -- outcome: success
 -- dialect: bigquery
+-- node_id: test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_qty.00213cbb80
+-- query_id: adbc-a3a4301a-9466-458b-a08c-f53cc196451e
+-- desc: execute adapter call
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_sales_recrutement_qty.00213cbb80", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select qty
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`sales_recrutement`
+where qty is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test;
+
+-- created_at: 2026-10-12T15:55:42.045871+00:00
+-- finished_at: 2026-10-12T15:55:44.218602+00:00
+-- elapsed: 2.2s
+-- outcome: success
+-- dialect: bigquery
+-- node_id: test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377
+-- query_id: adbc-2cc51f1e-a5e3-4dfb-87e9-dcf47a34d601
+-- desc: execute adapter call
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_date
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+where date_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test;
+
+-- created_at: 2026-10-12T15:55:43.678143+00:00
+-- finished_at: 2026-10-12T15:55:45.014077+00:00
+-- elapsed: 1.3s
+-- outcome: success
+-- dialect: bigquery
+-- node_id: test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5
+-- query_id: adbc-b82c0ef8-c984-48e9-a32b-71e7b3c0a992
+-- desc: execute adapter call
+/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5", "profile_name": "thc_analytics", "target_name": "dev"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select net_sales
+from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
+where net_sales is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test;
+
+-- created_at: 2026-10-12T15:55:43.670858+00:00
+-- finished_at: 2026-10-12T15:55:45.044430+00:00
+-- elapsed: 1.4s
+-- outcome: success
+-- dialect: bigquery
 -- node_id: test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_customers_id.f883863368
--- query_id: adbc-67087764-7855-4ca8-a3b3-72dbdfdaba44
+-- query_id: adbc-26a3d675-896c-4d07-9824-33c7b6e44b48
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_customers_id.f883863368", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -278,13 +348,13 @@ where customers_id is null
       
     ) dbt_internal_test;
 
--- created_at: 2026-10-12T15:48:14.498808+00:00
--- finished_at: 2026-10-12T15:48:15.938215+00:00
+-- created_at: 2026-10-12T15:55:43.845486+00:00
+-- finished_at: 2026-10-12T15:55:45.197794+00:00
 -- elapsed: 1.4s
 -- outcome: success
 -- dialect: bigquery
 -- node_id: test.thc_analytics.source_unique_thc_analytics_orders_recrutement_orders_id.7b5c8873bf
--- query_id: adbc-5f88c313-0a4f-459f-91fb-4fdffae86a02
+-- query_id: adbc-85ce54fe-eca9-4394-93eb-20ad853dc90b
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_unique_thc_analytics_orders_recrutement_orders_id.7b5c8873bf", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -323,83 +393,13 @@ having count(*) > 1
       
     ) dbt_internal_test;
 
--- created_at: 2026-10-12T15:48:14.552565+00:00
--- finished_at: 2026-10-12T15:48:15.993535+00:00
+-- created_at: 2026-10-12T15:55:45.573780+00:00
+-- finished_at: 2026-10-12T15:55:47.003799+00:00
 -- elapsed: 1.4s
 -- outcome: success
 -- dialect: bigquery
--- node_id: test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5
--- query_id: adbc-74167c5d-adad-497d-8194-66abc906696e
--- desc: execute adapter call
-/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_net_sales.db10a9d1d5", "profile_name": "thc_analytics", "target_name": "dev"} */
-
-    
-    select
-      count(*) as failures,
-      count(*) != 0 as should_warn,
-      count(*) != 0 as should_error
-    from (
-      
-    
-  
-    
-    
-
-
-
-select net_sales
-from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
-where net_sales is null
-
-
-
-  
-  
-      
-    ) dbt_internal_test;
-
--- created_at: 2026-10-12T15:48:14.596211+00:00
--- finished_at: 2026-10-12T15:48:16.075541+00:00
--- elapsed: 1.5s
--- outcome: success
--- dialect: bigquery
--- node_id: test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377
--- query_id: adbc-7774a7b2-7bd2-4347-b29f-adabba928736
--- desc: execute adapter call
-/* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.source_not_null_thc_analytics_orders_recrutement_date_date.0a1c202377", "profile_name": "thc_analytics", "target_name": "dev"} */
-
-    
-    select
-      count(*) as failures,
-      count(*) != 0 as should_warn,
-      count(*) != 0 as should_error
-    from (
-      
-    
-  
-    
-    
-
-
-
-select date_date
-from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`orders_recrutement`
-where date_date is null
-
-
-
-  
-  
-      
-    ) dbt_internal_test;
-
--- created_at: 2026-10-12T15:48:16.017001+00:00
--- finished_at: 2026-10-12T15:48:17.200702+00:00
--- elapsed: 1.2s
--- outcome: success
--- dialect: bigquery
 -- node_id: model.thc_analytics.stg_thc_analytics__sales
--- query_id: adbc-2798c4a4-cb5e-4ea0-be51-7a02c38a4c45
+-- query_id: adbc-4044d432-b6e9-4c67-a09c-1595b4ca9240
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.thc_analytics.stg_thc_analytics__sales", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -427,13 +427,13 @@ select * from renamed;
 
 ;
 
--- created_at: 2026-10-12T15:48:16.078279+00:00
--- finished_at: 2026-10-12T15:48:17.628553+00:00
--- elapsed: 1.6s
+-- created_at: 2026-10-12T15:55:46.604127+00:00
+-- finished_at: 2026-10-12T15:55:47.906553+00:00
+-- elapsed: 1.3s
 -- outcome: success
 -- dialect: bigquery
 -- node_id: model.thc_analytics.stg_thc_analytics__orders
--- query_id: adbc-0542464b-6a06-4e84-8902-eb412bbc639d
+-- query_id: adbc-ea47697d-bc9b-4afe-bc75-bb9f9a4141e3
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.thc_analytics.stg_thc_analytics__orders", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -458,13 +458,13 @@ select * from renamed;
 
 ;
 
--- created_at: 2026-10-12T15:48:17.207238+00:00
--- finished_at: 2026-10-12T15:48:19.313630+00:00
--- elapsed: 2.1s
+-- created_at: 2026-10-12T15:55:47.015041+00:00
+-- finished_at: 2026-10-12T15:55:48.545440+00:00
+-- elapsed: 1.5s
 -- outcome: success
 -- dialect: bigquery
 -- node_id: test.thc_analytics.assert_sales_amout_positive
--- query_id: adbc-f8b22b7f-bbd5-421d-96ac-2991f4789634
+-- query_id: adbc-4c2b7e03-6e50-412f-95fd-22efd15abce2
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.assert_sales_amout_positive", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -488,13 +488,13 @@ having sum(sales_amount) < 0
       
     ) dbt_internal_test;
 
--- created_at: 2026-10-12T15:48:17.643786+00:00
--- finished_at: 2026-10-12T15:48:19.398945+00:00
--- elapsed: 1.8s
+-- created_at: 2026-10-12T15:55:47.922637+00:00
+-- finished_at: 2026-10-12T15:55:49.400732+00:00
+-- elapsed: 1.5s
 -- outcome: success
 -- dialect: bigquery
 -- node_id: test.thc_analytics.assert_orders_and_sales_dates_match
--- query_id: adbc-f3219e93-a6c8-405d-8bcb-a01a2868732e
+-- query_id: adbc-ee115267-f8c0-4c26-8ad4-5cac9cc99b35
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.assert_orders_and_sales_dates_match", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -521,13 +521,13 @@ where orders.order_date != sales.sale_date
       
     ) dbt_internal_test;
 
--- created_at: 2026-10-12T15:48:17.638906+00:00
--- finished_at: 2026-10-12T15:48:20.979360+00:00
--- elapsed: 3.3s
+-- created_at: 2026-10-12T15:55:47.917215+00:00
+-- finished_at: 2026-10-12T15:55:49.451632+00:00
+-- elapsed: 1.5s
 -- outcome: success
 -- dialect: bigquery
 -- node_id: test.thc_analytics.assert_orders_amount_positive
--- query_id: adbc-1a4bd747-ecee-435d-acb2-004c4dcc876f
+-- query_id: adbc-5194ff0d-1684-48fd-8e32-b04b3cc61667
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.assert_orders_amount_positive", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -551,13 +551,13 @@ having sum(net_sales_amount) < 0
       
     ) dbt_internal_test;
 
--- created_at: 2026-10-12T15:48:20.987078+00:00
--- finished_at: 2026-10-12T15:48:22.416065+00:00
+-- created_at: 2026-10-12T15:55:49.455900+00:00
+-- finished_at: 2026-10-12T15:55:50.809035+00:00
 -- elapsed: 1.4s
 -- outcome: success
 -- dialect: bigquery
 -- node_id: model.thc_analytics.int_customers_orders
--- query_id: adbc-2d27aa57-56ae-4cb1-ad80-a69828681f4b
+-- query_id: adbc-071d5744-14e8-4afb-8216-4edd5cf5db58
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.thc_analytics.int_customers_orders", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -583,13 +583,13 @@ select * from customers_orders;
 
 ;
 
--- created_at: 2026-10-12T15:48:22.438200+00:00
--- finished_at: 2026-10-12T15:48:24.019625+00:00
+-- created_at: 2026-10-12T15:55:50.838082+00:00
+-- finished_at: 2026-10-12T15:55:52.408776+00:00
 -- elapsed: 1.6s
 -- outcome: success
 -- dialect: bigquery
 -- node_id: model.thc_analytics.int_customers_orders_segmentation
--- query_id: adbc-f122f80c-a3c1-4a64-9a18-5bbdf8a7a7a4
+-- query_id: adbc-49c5e67d-7a6a-4493-818c-f5bff1b424c4
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.thc_analytics.int_customers_orders_segmentation", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -650,13 +650,13 @@ select * from customers_status;
 
 ;
 
--- created_at: 2026-10-12T15:48:24.031561+00:00
--- finished_at: 2026-10-12T15:48:26.596130+00:00
--- elapsed: 2.6s
+-- created_at: 2026-10-12T15:55:52.420246+00:00
+-- finished_at: 2026-10-12T15:55:54.274334+00:00
+-- elapsed: 1.9s
 -- outcome: success
 -- dialect: bigquery
 -- node_id: test.thc_analytics.assert_orders_segmentation_not_unknown
--- query_id: adbc-5d7f1dec-ffa5-4bf5-90e9-ad5c9b5ec009
+-- query_id: adbc-c42a54ac-25a5-4ad2-b760-eb74dcdc42d2
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "test.thc_analytics.assert_orders_segmentation_not_unknown", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -677,13 +677,13 @@ where order_segmentation = 'Unknown'
       
     ) dbt_internal_test;
 
--- created_at: 2026-10-12T15:48:26.757471+00:00
--- finished_at: 2026-10-12T15:48:30.499982+00:00
--- elapsed: 3.7s
+-- created_at: 2026-10-12T15:55:54.639561+00:00
+-- finished_at: 2026-10-12T15:55:57.830713+00:00
+-- elapsed: 3.2s
 -- outcome: success
 -- dialect: bigquery
 -- node_id: model.thc_analytics.dim_thc_analytics__sales_orders
--- query_id: adbc-a457b568-6e5b-4211-b6a7-8664f54348c0
+-- query_id: adbc-01faf98f-c976-4255-8960-cd28b920f135
 -- desc: execute adapter call
 /* {"app": "dbt", "dbt_version": "2.0.0", "node_id": "model.thc_analytics.dim_thc_analytics__sales_orders", "profile_name": "thc_analytics", "target_name": "dev"} */
 
@@ -716,7 +716,7 @@ with
         sales.sale_product_quantity
         from orders
         left join sales on (orders.orders_id = sales.order_id and orders.customer_id = sales.customer_id)
-        left join customers_status on (orders.customer_id = customers_status.customer_id)
+        left join customers_status on (orders.customer_id = customers_status.customer_id and orders.orders_id = customers_status.orders_id)
         order by orders.orders_id
     )
 
