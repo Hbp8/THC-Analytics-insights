@@ -2,13 +2,13 @@
 with
     sales as (select * from {{ ref("stg_thc_analytics__sales") }}),
     orders as (select * from {{ ref("stg_thc_analytics__orders") }}),
-    customers_status as (select * from {{ ref("int_customers_status") }}),
+    customers_status as (select * from {{ ref("int_customers_orders_segmentation") }}),
 
 -- final cte
     final as (
         select orders.orders_id,
         orders.customer_id,
-        customers_status.customer_status,
+        customers_status.order_segmentation,
         orders.order_date,
         orders.net_sales_amount as total_net_sales_amount,
         sales.products_id,
