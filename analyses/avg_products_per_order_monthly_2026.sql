@@ -1,0 +1,15 @@
+with products_by_order as (
+    select
+        sales.sale_date,
+        sales.order_id,
+        count(distinct sales.products_id) as total_products
+    from {{ ref('stg_thc_analytics__sales') }} as sales
+    where extract(year from sale_date) = 2026
+    group by sales.sale_date, sales.order_id
+    having count(distinct sales.products_id) > 0
+)
+select
+    extract(month from sale_date) as month,
+    round(avg(total_products), 2) as avg_products_per_order
+from products_by_order
+group by extract(month from sale_date)
