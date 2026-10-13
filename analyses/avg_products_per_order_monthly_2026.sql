@@ -1,3 +1,4 @@
+-- Analysis of the average number of products per order for each month in 2026
 with products_by_order as (
     select
         sales.sale_date,

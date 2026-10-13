@@ -28,3 +28,7 @@ with
     )
 
 select * from final
+{% if is_incremental() %}
+where
+order_date >= (select max(order_date) from {{this}})
+{% endif %}

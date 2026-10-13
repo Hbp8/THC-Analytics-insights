@@ -1,3 +1,16 @@
+-- Model implementing the segmentation logic for customers based on their orders in the past 12 months with the data to evaluate segments.
+{{
+    config(
+        materialized = 'incremental',
+        incremental_strategy = 'insert_overwrite',
+        unique_key = 'order_id',
+        partition_by={
+            'field': 'order_date',
+            'data_type': 'date',
+            'granularity': 'day'
+        }
+    )
+}}
 with
     -- import ctes
     customers_orders as (
@@ -19,9 +32,9 @@ with
             count(distinct orders_2.orders_id)-1 as total_prior_orders_past_12_months
         from orders as orders_1
         left join orders as orders_2
-            on orders_1.customer_id = orders_2.customer_id
-            and cast(orders_2.order_date as date) between date_sub(cast(orders_1.order_date as date), interval 12 month) and cast(orders_1.order_date as date)
-        where orders_1.order_date >= '2026-01-01'
+            on (orders_1.customer_id = orders_2.customer_id
+                and cast(orders_2.order_date as date) between date_sub(cast(orders_1.order_date as date), interval 12 month) and cast(orders_1.order_date as date)
+                )
         group by
             orders_1.customer_id,
             orders_1.orders_id,
@@ -52,3 +65,7 @@ with
     )
 
 select * from customers_orders_segmentation
+{% if is_incremental() %}
+where
+order_date >= (select max(order_date) from {{this}})
+{% endif %}
