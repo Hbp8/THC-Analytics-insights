@@ -5,6 +5,16 @@ sources:
     database: thcanalyticsinsights
     schema: thcanalyticsinsights_dev_1
     description: "The source models for the THC Analytics project, based on csv imports."
+    config:
+      freshness:
+        warn_after:
+          count: 12
+          period: hour
+        #error not included for now, as it would break the build. Would be implementeed in real production environment.
+        #error_after:
+        #  count: 1
+        #  period: day
+      loaded_at_field: date_date
     tables:
       - name: sales_recrutement
         description: "The raw table for sales recruitment data."

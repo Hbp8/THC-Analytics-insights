@@ -1,6 +1,19 @@
+{{
+    config(
+        materialized = 'incremental',
+        incremental_strategy = 'insert_overwrite',
+        unique_key = 'order_id',
+        partition_by={
+            'field': 'order_date',
+            'data_type': 'date',
+            'granularity': 'day'
+        }
+    )
+}}
+
 with
     orders as (select * from {{ ref('stg_thc_analytics__orders') }}),
-    sales as (select * from {{ ref('stg_thc_analytics__sales') }}),
+    sales as (select * from {{ ref('stg_thc_analytics__sales') }} where is_orphan_order = false),
 
     orders_with_products_qty as (
         select
@@ -16,3 +29,7 @@ with
     )
 
 select * from orders_with_products_qty
+{% if is_incremental() %}
+where
+order_date >= (select max(order_date) from {{this}})
+{% endif %}

@@ -1,0 +1,83 @@
+models:
+  - name: stg_thc_analytics__orders
+    description: "The staging models for the THC Analytics orders_recrutement table. One line per order."
+    columns:
+      - name: order_date
+        description: "The date at which the order was made."
+        data_tests:
+          - not_null
+      - name: customer_id
+        description: "The unique ID of the customer."
+        data_tests:
+          - not_null
+      - name: orders_id
+        description: "The unique ID of the order. Primary key for the orders_recrutement table."
+        data_tests:
+          - unique
+          - not_null
+      - name: net_sales_amount
+        description: "The net sales amount."
+        data_tests:
+          - not_null
+
+  - name: stg_thc_analytics__sales
+    description: "The staging models for the THC Analytics sales_recrutement table. One line per sale."
+    columns:
+      - name: sales_id
+        description: "The unique ID of the sale. Primary key for the sales_recrutement table."
+        data_tests:
+          - unique
+          - not_null
+      - name: sale_date
+        description: "The date at which the sale was made."
+        data_tests:
+          - not_null
+      - name: customer_id
+        description: "The unique ID of the customer."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thc_analytics__orders')
+                field: customer_id
+      - name: order_id
+        description: "The ID of the order."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thc_analytics__orders')
+                field: orders_id
+              config:
+                where: "is_orphan_order = false"
+      - name: products_id
+        description: "The unique ID of the product."
+        data_tests:
+          - not_null
+      - name: sales_amount
+        description: "The net sales amount for the product in the order."
+        data_tests:
+          - not_null
+      - name: sale_product_quantity
+        description: "The quantity of items sold for a specific product in the order."
+        data_tests:
+          - not_null
+      - name: is_orphan_order
+        description: "Boolean flag indicating if the sale order_id is missing from orders_recrutement."
+        data_tests:
+          - not_null
+
+  - name: stg_thc_analytics__orphan_sales
+    description: "Audit/quarantine view exposing all sales records whose order_id does not exist in orders_recrutement."
+    columns:
+      - name: sales_id
+        description: "The unique ID of the sale."
+        data_tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: "The orphaned order ID."
+        data_tests:
+          - not_null
+      - name: logged_at
+        description: "Timestamp when the orphan was logged in audit."

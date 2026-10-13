@@ -1,4 +1,5 @@
 with
+    -- import ctes
     customers_orders as (
         select * from {{ ref('int_customers_orders') }}
     ),

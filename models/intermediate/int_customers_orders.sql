@@ -1,5 +1,5 @@
 with
-    sales as (select * from {{ ref('stg_thc_analytics__sales') }}),
+    sales as (select * from {{ ref('stg_thc_analytics__sales') }} where is_orphan_order = false),
     orders as (select * from {{ ref('stg_thc_analytics__orders') }}),
 
     customers_orders as (
