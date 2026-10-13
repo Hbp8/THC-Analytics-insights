@@ -1,4 +1,16 @@
--- Dimensional model for customer orders in 2026 including segmentation based on order history
+-- Dimensional model for customer orders in 2026 including segmentation based on order history, one order per row.
+{{
+    config(
+        materialized = 'incremental',
+        incremental_strategy = 'insert_overwrite',
+        unique_key = 'order_id',
+        partition_by={
+            'field': 'order_date',
+            'data_type': 'date',
+            'granularity': 'day'
+        }
+    )
+}}
 with
     customers_segmentation as (select * from {{ ref('int_customers_orders_segmentation') }}),
     orders as (select * from {{ ref('stg_thc_analytics__orders') }}),
