@@ -86484,3 +86484,319 @@ Finished 'compile' successfully for target 'dev' [1.6s]
 Processed: 9 models | 3 analyses
 Summary: 12 total | 12 success
 11:43:17.139360 [info ]: Cached model count updated: 9 models (accurate)
+==================== 2026-10-13T11:55:57.007736Z | b2ffbfb0-44ce-4b48-b63f-3efe366a785b ====================
+11:55:57.008386 [info ]: Started loading project
+11:55:57.009133 [info ]: Loading ~/.dbt/profiles.yml
+11:55:57.026615 [info ]: Finished loading project [  0.02s]
+11:55:57.063539 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [55ms]
+11:55:57.063747 [info ]: Cached model count updated: 9 models (accurate)
+11:55:57.085376 [info ]: Started scheduling
+11:55:57.086767 [info ]: Finished scheduling [  0.00s]
+11:55:57.150961 [info ]: Started building task graph
+11:55:57.151344 [info ]: Finished building task graph [  0.00s]
+11:55:57.175041 [info ]: Started rendering (1 nodes)
+11:55:57.175062 [info ]: Started analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026
+11:55:57.175072 [debug]: Started rendering analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026
+11:55:57.175503 [debug]: Compiled SQL for node analysis.thc_analytics.avg_products_per_order_monthly_2026 at target/.lsp/compiled/thc_analytics/analyses/avg_products_per_order_monthly_2026.sql
+11:55:57.175559 [debug]: Finished rendering [  0.00s] analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026 [success]
+11:55:57.175568 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:55:57.175579 [info ]: Started running (1 nodes)
+11:55:57.175582 [info ]: Started running analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026
+11:55:59.569559 [debug]: Query executed on node unknown:
+
+  
+  with products_by_order as (
+    select
+        sales.sale_date,
+        sales.order_id,
+        count(distinct sales.products_id) as total_products
+    from `thcanalyticsinsights`.`thcanalyticsinsights_dev_1`.`stg_thc_analytics__sales` as sales
+    where extract(year from sale_date) = 2026
+    group by sales.sale_date, sales.order_id
+    having count(distinct sales.products_id) > 0
+)
+select
+    extract(month from sale_date) as month,
+    round(avg(total_products), 2) as avg_products_per_order
+from products_by_order
+group by extract(month from sale_date)
+  
+  limit 1000
+
+11:55:59.944991 [info ]: Query show_analysis_thc_analytics_avg_products_per_order_monthly_2026
+┌───────┬────────────────────────┐
+│ month ┆ avg_products_per_order │
+╞═══════╪════════════════════════╡
+│ 8     ┆ 8.38                   │
+│ 2     ┆ 7.96                   │
+│ 3     ┆ 7.87                   │
+│ 10    ┆ 7.54                   │
+│ 5     ┆ 8.55                   │
+│ 6     ┆ 7.95                   │
+│ 9     ┆ 7.89                   │
+│ 4     ┆ 8.64                   │
+│ 7     ┆ 7.64                   │
+│ 11    ┆ 6.39                   │
+│ 1     ┆ 7.93                   │
+│ 12    ┆ 6.39                   │
+└───────┴────────────────────────┘
+12 rows.
+11:55:59.945283 [info ]: Finished running [  2.77s] analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026 [success]
+11:55:59.945313 [info ]: Finished running [  2.77s] (1 nodes, 0 skipped, 0 errors)
+11:55:59.945329 [info ]:  Succeeded analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026 (analysis) [1 of 1 in 2.77s]
+==================== 2026-10-13T11:56:01.142070Z | 7b27e65c-2271-4297-8a9e-8f5d7d0c71ab ====================
+11:56:01.142197 [info ]: Started loading project
+11:56:01.142978 [info ]: Loading ~/.dbt/profiles.yml
+11:56:01.150947 [info ]: Finished loading project [  0.01s]
+11:56:01.180538 [info ]: Cached model count updated: 9 models (estimate)
+11:56:01.180558 [info ]: Cached model count updated: 9 models (accurate)
+11:56:01.181133 [info ]: Started scheduling
+11:56:01.181286 [info ]: Finished scheduling [  0.00s]
+11:56:01.181304 [debug]: Compilation - 12 nodes selected: {"analysis.thc_analytics.avg_products_per_order_monthly_2026", "analysis.thc_analytics.orders_per_month_2026", "analysis.thc_analytics.total_orders_2026", "model.thc_analytics.dim_customers_orders_segmentation_2026", "model.thc_analytics.dim_thc_analytics__sales_orders", "model.thc_analytics.fct_orders_with_products_qty_2025_2026", "model.thc_analytics.fct_sales_products_by_date", "model.thc_analytics.int_customers_orders", "model.thc_analytics.int_customers_orders_segmentation", "model.thc_analytics.stg_thc_analytics__orders", "model.thc_analytics.stg_thc_analytics__orphan_sales", "model.thc_analytics.stg_thc_analytics__sales"}
+11:56:01.182250 [debug]:    Started downloading relations (1 items)
+11:56:03.410609 [debug]:   Finished [  2.23s] downloading relations (1 items)
+11:56:03.489988 [info ]: Started building task graph
+11:56:03.490081 [info ]: Finished building task graph [  0.00s]
+11:56:03.494431 [info ]: Started rendering (12 nodes)
+11:56:03.494441 [info ]: Started model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales
+11:56:03.494448 [debug]: Started rendering model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales
+11:56:03.494466 [info ]: Started model thcanalyticsinsights_dev_1.fct_sales_products_by_date
+11:56:03.494471 [debug]: Started rendering model thcanalyticsinsights_dev_1.fct_sales_products_by_date
+11:56:03.494481 [info ]: Started model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026
+11:56:03.494486 [debug]: Started rendering model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026
+11:56:03.494496 [info ]: Started model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders
+11:56:03.494501 [debug]: Started rendering model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders
+11:56:03.494511 [info ]: Started model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026
+11:56:03.494515 [debug]: Started rendering model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026
+11:56:03.494522 [info ]: Started model thcanalyticsinsights_dev_1.int_customers_orders_segmentation
+11:56:03.494526 [debug]: Started rendering model thcanalyticsinsights_dev_1.int_customers_orders_segmentation
+11:56:03.494533 [info ]: Started model thcanalyticsinsights_dev_1.int_customers_orders
+11:56:03.494539 [debug]: Started rendering model thcanalyticsinsights_dev_1.int_customers_orders
+11:56:03.494546 [info ]: Started analysis thcanalyticsinsights_dev_1.total_orders_2026
+11:56:03.494556 [debug]: Started rendering analysis thcanalyticsinsights_dev_1.total_orders_2026
+11:56:03.494566 [info ]: Started analysis thcanalyticsinsights_dev_1.orders_per_month_2026
+11:56:03.494570 [debug]: Started rendering analysis thcanalyticsinsights_dev_1.orders_per_month_2026
+11:56:03.494577 [info ]: Started analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026
+11:56:03.494582 [debug]: Started rendering analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026
+11:56:03.494589 [info ]: Started model thcanalyticsinsights_dev_1.stg_thc_analytics__sales
+11:56:03.494594 [debug]: Started rendering model thcanalyticsinsights_dev_1.stg_thc_analytics__sales
+11:56:03.494602 [info ]: Started model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+11:56:03.494606 [debug]: Started rendering model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+11:56:03.496042 [debug]: Compiled SQL for node model.thc_analytics.dim_thc_analytics__sales_orders at target/.lsp/compiled/thc_analytics/models/marts/dim_thc_analytics__sales_orders.sql
+11:56:03.496124 [debug]: Compiled SQL for node model.thc_analytics.stg_thc_analytics__orphan_sales at target/.lsp/compiled/thc_analytics/models/staging/stg_thc_analytics__orphan_sales.sql
+11:56:03.496150 [debug]: Compiled SQL for node model.thc_analytics.fct_orders_with_products_qty_2025_2026 at target/.lsp/compiled/thc_analytics/models/marts/fct_orders_with_products_qty_2025_2026.sql
+11:56:03.496163 [debug]: Compiled SQL for node model.thc_analytics.fct_sales_products_by_date at target/.lsp/compiled/thc_analytics/models/marts/fct_sales_products_by_date.sql
+11:56:03.496164 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders [success]
+11:56:03.496196 [info ]: Started analyzing (9 nodes)
+11:56:03.496213 [debug]: Started analyzing model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders
+11:56:03.496226 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales [success]
+11:56:03.496284 [debug]: Started analyzing model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales
+11:56:03.496365 [debug]: Compiled SQL for node model.thc_analytics.int_customers_orders at target/.lsp/compiled/thc_analytics/models/intermediate/int_customers_orders.sql
+11:56:03.496344 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026 [success]
+11:56:03.496420 [debug]: Started analyzing model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026
+11:56:03.496442 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.fct_sales_products_by_date [success]
+11:56:03.496453 [debug]: Started analyzing model thcanalyticsinsights_dev_1.fct_sales_products_by_date
+11:56:03.496543 [debug]: Compiled SQL for node analysis.thc_analytics.avg_products_per_order_monthly_2026 at target/.lsp/compiled/thc_analytics/analyses/avg_products_per_order_monthly_2026.sql
+11:56:03.496498 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.int_customers_orders [success]
+11:56:03.496597 [debug]: Started analyzing model thcanalyticsinsights_dev_1.int_customers_orders
+11:56:03.496686 [debug]: Finished rendering [  0.00s] analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026 [success]
+11:56:03.496725 [info ]:  Succeeded analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026 (analysis) [10 of 12 in 0.00s]
+11:56:03.497423 [debug]: Compiled SQL for node analysis.thc_analytics.total_orders_2026 at target/.lsp/compiled/thc_analytics/analyses/total_orders_2026.sql
+11:56:03.497457 [debug]: Finished rendering [  0.00s] analysis thcanalyticsinsights_dev_1.total_orders_2026 [success]
+11:56:03.497469 [info ]:  Succeeded analysis thcanalyticsinsights_dev_1.total_orders_2026 (analysis) [8 of 12 in 0.00s]
+11:56:03.497475 [debug]: Compiled SQL for node model.thc_analytics.int_customers_orders_segmentation at target/.lsp/compiled/thc_analytics/models/intermediate/int_customers_orders_segmentation.sql
+11:56:03.497540 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.int_customers_orders_segmentation [success]
+11:56:03.497553 [debug]: Started analyzing model thcanalyticsinsights_dev_1.int_customers_orders_segmentation
+11:56:03.497589 [debug]: Compiled SQL for node model.thc_analytics.dim_customers_orders_segmentation_2026 at target/.lsp/compiled/thc_analytics/models/marts/dim_customers_orders_segmentation_2026.sql
+11:56:03.497676 [debug]: Compiled SQL for node model.thc_analytics.stg_thc_analytics__sales at target/.lsp/compiled/thc_analytics/models/staging/stg_thc_analytics__sales.sql
+11:56:03.497669 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026 [success]
+11:56:03.497763 [debug]: Compiled SQL for node model.thc_analytics.stg_thc_analytics__orders at target/.lsp/compiled/thc_analytics/models/staging/stg_thc_analytics__orders.sql
+11:56:03.497766 [debug]: Compiled SQL for node analysis.thc_analytics.orders_per_month_2026 at target/.lsp/compiled/thc_analytics/analyses/orders_per_month_2026.sql
+11:56:03.497798 [debug]: Started analyzing model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026
+11:56:03.497814 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__sales [success]
+11:56:03.497822 [debug]: Started analyzing model thcanalyticsinsights_dev_1.stg_thc_analytics__sales
+11:56:03.497837 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orders [success]
+11:56:03.497844 [debug]: Started analyzing model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+11:56:03.497855 [debug]: Finished rendering [  0.00s] analysis thcanalyticsinsights_dev_1.orders_per_month_2026 [success]
+11:56:03.497862 [info ]: Finished rendering [  0.00s] (12 nodes, 0 skipped, 0 errors)
+11:56:03.497867 [info ]:  Succeeded analysis thcanalyticsinsights_dev_1.orders_per_month_2026 (analysis) [9 of 12 in 0.00s]
+11:56:03.499643 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.fct_sales_products_by_date [success]
+11:56:03.499661 [info ]:  Succeeded model thcanalyticsinsights_dev_1.fct_sales_products_by_date (incremental) [2 of 12 in 0.00s]
+11:56:03.499675 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026 [success]
+11:56:03.499685 [info ]:  Succeeded model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026 (incremental) [3 of 12 in 0.00s]
+11:56:03.499697 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.int_customers_orders_segmentation [success]
+11:56:03.499703 [info ]:  Succeeded model thcanalyticsinsights_dev_1.int_customers_orders_segmentation (view) [6 of 12 in 0.01s]
+11:56:03.499712 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales [success]
+11:56:03.499718 [info ]:  Succeeded model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales (view) [1 of 12 in 0.00s]
+11:56:03.499728 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.int_customers_orders [success]
+11:56:03.499736 [info ]:  Succeeded model thcanalyticsinsights_dev_1.int_customers_orders (view) [7 of 12 in 0.00s]
+11:56:03.499747 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders [success]
+11:56:03.499753 [info ]:  Succeeded model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders (incremental) [4 of 12 in 0.00s]
+11:56:03.499763 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026 [success]
+11:56:03.499771 [info ]:  Succeeded model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026 (incremental) [5 of 12 in 0.00s]
+11:56:03.499780 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orders [success]
+11:56:03.499786 [info ]:  Succeeded model thcanalyticsinsights_dev_1.stg_thc_analytics__orders (view) [12 of 12 in 0.00s]
+11:56:03.499979 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__sales [success]
+11:56:03.499986 [info ]: Finished analyzing [  0.00s] (9 nodes, 0 skipped, 0 errors)
+11:56:03.499992 [info ]:  Succeeded model thcanalyticsinsights_dev_1.stg_thc_analytics__sales (incremental) [11 of 12 in 0.01s]
+11:56:03.504185 [info ]: Started scheduling
+11:56:03.504238 [info ]: Finished scheduling [  0.00s]
+11:56:03.504550 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [2.4s]
+Processed: 9 models | 3 analyses
+Summary: 12 total | 12 success
+11:56:03.505097 [info ]: Cached model count updated: 9 models (accurate)
+==================== 2026-10-13T11:56:16.870486Z | 90f82cd3-a378-45ca-8b88-c0c49c9344cb ====================
+11:56:16.870549 [info ]: Started loading project
+11:56:16.870814 [info ]: Loading ~/.dbt/profiles.yml
+11:56:16.882752 [info ]: Started parsing
+11:56:16.971476 [info ]: Finished loading project [  0.10s]
+11:56:16.974285 [debug]: Finished parsing analyses/avg_products_per_order_monthly_2026.sql [  0.00s]
+11:56:17.089497 [info ]: Finished parsing [  0.21s]
+11:56:17.091995 [info ]: Cached model count updated: 9 models (estimate)
+11:56:17.092004 [info ]: Cached model count updated: 9 models (accurate)
+11:56:17.092035 [info ]: Started scheduling
+11:56:17.092136 [info ]: Finished scheduling [  0.00s]
+11:56:17.092145 [debug]: Compilation - 3 nodes selected: {"analysis.thc_analytics.avg_products_per_order_monthly_2026", "model.thc_analytics.stg_thc_analytics__orders", "model.thc_analytics.stg_thc_analytics__sales"}
+11:56:17.092840 [debug]:    Started downloading relations (1 items)
+11:56:17.472388 [debug]: Ignoring unsupported LSP notification
+11:56:18.961219 [debug]:   Finished [  1.87s] downloading relations (1 items)
+11:56:19.020020 [info ]: Started building task graph
+11:56:19.020069 [info ]: Finished building task graph [  0.00s]
+11:56:19.024266 [info ]: Started rendering (3 nodes)
+11:56:19.024279 [info ]: Started analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026
+11:56:19.024289 [debug]: Started rendering analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026
+11:56:19.024308 [info ]: Started model thcanalyticsinsights_dev_1.stg_thc_analytics__sales
+11:56:19.024322 [debug]: Started rendering model thcanalyticsinsights_dev_1.stg_thc_analytics__sales
+11:56:19.024335 [info ]: Started model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+11:56:19.024346 [debug]: Started rendering model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+11:56:19.024761 [debug]: Compiled SQL for node analysis.thc_analytics.avg_products_per_order_monthly_2026 at target/.lsp/compiled/thc_analytics/analyses/avg_products_per_order_monthly_2026.sql
+11:56:19.024830 [debug]: Finished rendering [  0.00s] analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026 [success]
+11:56:19.024841 [info ]:  Succeeded analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026 (analysis) [1 of 3 in 0.00s]
+11:56:19.025301 [debug]: Compiled SQL for node model.thc_analytics.stg_thc_analytics__sales at target/.lsp/compiled/thc_analytics/models/staging/stg_thc_analytics__sales.sql
+11:56:19.025298 [debug]: Compiled SQL for node model.thc_analytics.stg_thc_analytics__orders at target/.lsp/compiled/thc_analytics/models/staging/stg_thc_analytics__orders.sql
+11:56:19.025341 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orders [success]
+11:56:19.025360 [info ]: Started analyzing (2 nodes)
+11:56:19.025365 [debug]: Started analyzing model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+11:56:19.025376 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__sales [success]
+11:56:19.025384 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+11:56:19.025391 [debug]: Started analyzing model thcanalyticsinsights_dev_1.stg_thc_analytics__sales
+11:56:19.025583 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orders [success]
+11:56:19.025593 [info ]:  Succeeded model thcanalyticsinsights_dev_1.stg_thc_analytics__orders (view) [3 of 3 in 0.00s]
+11:56:19.026706 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__sales [success]
+11:56:19.026713 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:56:19.026718 [info ]:  Succeeded model thcanalyticsinsights_dev_1.stg_thc_analytics__sales (incremental) [2 of 3 in 0.00s]
+11:56:19.032033 [info ]: Started scheduling
+11:56:19.032140 [info ]: Finished scheduling [  0.00s]
+11:56:19.032991 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [2.2s]
+Processed: 2 models | 1 analysis
+Summary: 3 total | 3 success
+11:56:19.033050 [info ]: Cached model count updated: 9 models (accurate)
+==================== 2026-10-13T11:56:20.237069Z | 4c82904b-1f28-4ba7-935c-ab4a374c3fda ====================
+11:56:20.237135 [info ]: Started loading project
+11:56:20.237567 [info ]: Loading ~/.dbt/profiles.yml
+11:56:20.246348 [info ]: Finished loading project [  0.01s]
+11:56:20.271097 [info ]: Cached model count updated: 9 models (estimate)
+11:56:20.271114 [info ]: Cached model count updated: 9 models (accurate)
+11:56:20.271167 [info ]: Started scheduling
+11:56:20.271310 [info ]: Finished scheduling [  0.00s]
+11:56:20.271353 [debug]: Compilation - 12 nodes selected: {"analysis.thc_analytics.avg_products_per_order_monthly_2026", "analysis.thc_analytics.orders_per_month_2026", "analysis.thc_analytics.total_orders_2026", "model.thc_analytics.dim_customers_orders_segmentation_2026", "model.thc_analytics.dim_thc_analytics__sales_orders", "model.thc_analytics.fct_orders_with_products_qty_2025_2026", "model.thc_analytics.fct_sales_products_by_date", "model.thc_analytics.int_customers_orders", "model.thc_analytics.int_customers_orders_segmentation", "model.thc_analytics.stg_thc_analytics__orders", "model.thc_analytics.stg_thc_analytics__orphan_sales", "model.thc_analytics.stg_thc_analytics__sales"}
+11:56:20.272439 [debug]:    Started downloading relations (1 items)
+11:56:22.049237 [debug]:   Finished [  1.78s] downloading relations (1 items)
+11:56:22.125902 [info ]: Started building task graph
+11:56:22.125990 [info ]: Finished building task graph [  0.00s]
+11:56:22.130315 [info ]: Started rendering (12 nodes)
+11:56:22.130326 [info ]: Started model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales
+11:56:22.130335 [debug]: Started rendering model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales
+11:56:22.130355 [info ]: Started model thcanalyticsinsights_dev_1.fct_sales_products_by_date
+11:56:22.130362 [debug]: Started rendering model thcanalyticsinsights_dev_1.fct_sales_products_by_date
+11:56:22.130372 [info ]: Started model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026
+11:56:22.130379 [debug]: Started rendering model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026
+11:56:22.130392 [info ]: Started model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders
+11:56:22.130397 [debug]: Started rendering model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders
+11:56:22.130406 [info ]: Started model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026
+11:56:22.130411 [debug]: Started rendering model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026
+11:56:22.130420 [info ]: Started model thcanalyticsinsights_dev_1.int_customers_orders_segmentation
+11:56:22.130426 [debug]: Started rendering model thcanalyticsinsights_dev_1.int_customers_orders_segmentation
+11:56:22.130435 [info ]: Started model thcanalyticsinsights_dev_1.int_customers_orders
+11:56:22.130441 [debug]: Started rendering model thcanalyticsinsights_dev_1.int_customers_orders
+11:56:22.130449 [info ]: Started analysis thcanalyticsinsights_dev_1.total_orders_2026
+11:56:22.130454 [debug]: Started rendering analysis thcanalyticsinsights_dev_1.total_orders_2026
+11:56:22.130462 [info ]: Started analysis thcanalyticsinsights_dev_1.orders_per_month_2026
+11:56:22.130473 [debug]: Started rendering analysis thcanalyticsinsights_dev_1.orders_per_month_2026
+11:56:22.130481 [info ]: Started analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026
+11:56:22.130489 [debug]: Started rendering analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026
+11:56:22.130497 [info ]: Started model thcanalyticsinsights_dev_1.stg_thc_analytics__sales
+11:56:22.130502 [debug]: Started rendering model thcanalyticsinsights_dev_1.stg_thc_analytics__sales
+11:56:22.130510 [info ]: Started model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+11:56:22.130519 [debug]: Started rendering model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+11:56:22.131349 [debug]: Compiled SQL for node model.thc_analytics.fct_orders_with_products_qty_2025_2026 at target/.lsp/compiled/thc_analytics/models/marts/fct_orders_with_products_qty_2025_2026.sql
+11:56:22.131369 [debug]: Compiled SQL for node model.thc_analytics.stg_thc_analytics__orphan_sales at target/.lsp/compiled/thc_analytics/models/staging/stg_thc_analytics__orphan_sales.sql
+11:56:22.131371 [debug]: Compiled SQL for node model.thc_analytics.fct_sales_products_by_date at target/.lsp/compiled/thc_analytics/models/marts/fct_sales_products_by_date.sql
+11:56:22.131436 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026 [success]
+11:56:22.131467 [info ]: Started analyzing (9 nodes)
+11:56:22.131473 [debug]: Started analyzing model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026
+11:56:22.131474 [debug]: Compiled SQL for node model.thc_analytics.int_customers_orders at target/.lsp/compiled/thc_analytics/models/intermediate/int_customers_orders.sql
+11:56:22.131486 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales [success]
+11:56:22.131493 [debug]: Started analyzing model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales
+11:56:22.131501 [debug]: Started analyzing model thcanalyticsinsights_dev_1.fct_sales_products_by_date
+11:56:22.131579 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.fct_sales_products_by_date [success]
+11:56:22.131593 [debug]: Started analyzing model thcanalyticsinsights_dev_1.int_customers_orders
+11:56:22.131598 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.int_customers_orders [success]
+11:56:22.131731 [debug]: Compiled SQL for node model.thc_analytics.dim_thc_analytics__sales_orders at target/.lsp/compiled/thc_analytics/models/marts/dim_thc_analytics__sales_orders.sql
+11:56:22.131815 [debug]: Compiled SQL for node model.thc_analytics.stg_thc_analytics__sales at target/.lsp/compiled/thc_analytics/models/staging/stg_thc_analytics__sales.sql
+11:56:22.131845 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders [success]
+11:56:22.131884 [debug]: Started analyzing model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders
+11:56:22.131957 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__sales [success]
+11:56:22.131997 [debug]: Started analyzing model thcanalyticsinsights_dev_1.stg_thc_analytics__sales
+11:56:22.132016 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.fct_sales_products_by_date [success]
+11:56:22.132027 [info ]:  Succeeded model thcanalyticsinsights_dev_1.fct_sales_products_by_date (incremental) [2 of 12 in 0.00s]
+11:56:22.132045 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.int_customers_orders [success]
+11:56:22.132051 [info ]:  Succeeded model thcanalyticsinsights_dev_1.int_customers_orders (view) [7 of 12 in 0.00s]
+11:56:22.132063 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales [success]
+11:56:22.132071 [info ]:  Succeeded model thcanalyticsinsights_dev_1.stg_thc_analytics__orphan_sales (view) [1 of 12 in 0.00s]
+11:56:22.132102 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026 [success]
+11:56:22.132112 [info ]:  Succeeded model thcanalyticsinsights_dev_1.fct_orders_with_products_qty_2025_2026 (incremental) [3 of 12 in 0.00s]
+11:56:22.132212 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders [success]
+11:56:22.132222 [info ]:  Succeeded model thcanalyticsinsights_dev_1.dim_thc_analytics__sales_orders (incremental) [4 of 12 in 0.00s]
+11:56:22.132828 [debug]: Compiled SQL for node analysis.thc_analytics.total_orders_2026 at target/.lsp/compiled/thc_analytics/analyses/total_orders_2026.sql
+11:56:22.132853 [debug]: Finished rendering [  0.00s] analysis thcanalyticsinsights_dev_1.total_orders_2026 [success]
+11:56:22.132860 [debug]: Compiled SQL for node model.thc_analytics.dim_customers_orders_segmentation_2026 at target/.lsp/compiled/thc_analytics/models/marts/dim_customers_orders_segmentation_2026.sql
+11:56:22.132860 [info ]:  Succeeded analysis thcanalyticsinsights_dev_1.total_orders_2026 (analysis) [8 of 12 in 0.00s]
+11:56:22.132884 [debug]: Compiled SQL for node analysis.thc_analytics.orders_per_month_2026 at target/.lsp/compiled/thc_analytics/analyses/orders_per_month_2026.sql
+11:56:22.132909 [debug]: Compiled SQL for node analysis.thc_analytics.avg_products_per_order_monthly_2026 at target/.lsp/compiled/thc_analytics/analyses/avg_products_per_order_monthly_2026.sql
+11:56:22.132918 [debug]: Compiled SQL for node model.thc_analytics.int_customers_orders_segmentation at target/.lsp/compiled/thc_analytics/models/intermediate/int_customers_orders_segmentation.sql
+11:56:22.132921 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026 [success]
+11:56:22.132931 [debug]: Started analyzing model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026
+11:56:22.132940 [debug]: Finished rendering [  0.00s] analysis thcanalyticsinsights_dev_1.orders_per_month_2026 [success]
+11:56:22.132948 [info ]:  Succeeded analysis thcanalyticsinsights_dev_1.orders_per_month_2026 (analysis) [9 of 12 in 0.00s]
+11:56:22.132959 [debug]: Finished rendering [  0.00s] analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026 [success]
+11:56:22.132965 [info ]:  Succeeded analysis thcanalyticsinsights_dev_1.avg_products_per_order_monthly_2026 (analysis) [10 of 12 in 0.00s]
+11:56:22.132978 [debug]: Started analyzing model thcanalyticsinsights_dev_1.int_customers_orders_segmentation
+11:56:22.133066 [debug]: Compiled SQL for node model.thc_analytics.stg_thc_analytics__orders at target/.lsp/compiled/thc_analytics/models/staging/stg_thc_analytics__orders.sql
+11:56:22.133025 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.int_customers_orders_segmentation [success]
+11:56:22.133104 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026 [success]
+11:56:22.133112 [info ]:  Succeeded model thcanalyticsinsights_dev_1.dim_customers_orders_segmentation_2026 (incremental) [5 of 12 in 0.00s]
+11:56:22.133127 [debug]: Finished rendering [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orders [success]
+11:56:22.133134 [info ]: Finished rendering [  0.00s] (12 nodes, 0 skipped, 0 errors)
+11:56:22.133140 [debug]: Started analyzing model thcanalyticsinsights_dev_1.stg_thc_analytics__orders
+11:56:22.133206 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__orders [success]
+11:56:22.133214 [info ]:  Succeeded model thcanalyticsinsights_dev_1.stg_thc_analytics__orders (view) [12 of 12 in 0.00s]
+11:56:22.133405 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.stg_thc_analytics__sales [success]
+11:56:22.133414 [info ]:  Succeeded model thcanalyticsinsights_dev_1.stg_thc_analytics__sales (incremental) [11 of 12 in 0.00s]
+11:56:22.133431 [debug]: Finished analyzing [  0.00s] model thcanalyticsinsights_dev_1.int_customers_orders_segmentation [success]
+11:56:22.133439 [info ]: Finished analyzing [  0.00s] (9 nodes, 0 skipped, 0 errors)
+11:56:22.133445 [info ]:  Succeeded model thcanalyticsinsights_dev_1.int_customers_orders_segmentation (view) [6 of 12 in 0.00s]
+11:56:22.138491 [info ]: Started scheduling
+11:56:22.138540 [info ]: Finished scheduling [  0.00s]
+11:56:22.138700 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'dev' [1.9s]
+Processed: 9 models | 3 analyses
+Summary: 12 total | 12 success
+11:56:22.139480 [info ]: Cached model count updated: 9 models (accurate)

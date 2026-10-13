@@ -5,6 +5,7 @@ with products_by_order as (
         count(distinct sales.products_id) as total_products
     from {{ ref('stg_thc_analytics__sales') }} as sales
     where extract(year from sale_date) = 2026
+    and sales.is_orphan_order = false
     group by sales.sale_date, sales.order_id
     having count(distinct sales.products_id) > 0
 )
