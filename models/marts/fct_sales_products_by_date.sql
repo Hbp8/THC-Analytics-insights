@@ -1,3 +1,4 @@
+-- Fact table for sales by product and date. One line per product per day, with total sales amount and quantity sold.
 {{
     config(
         materialized = 'incremental',
@@ -11,8 +12,9 @@
     )
 }}
 
--- imports ctes
+
 with
+    -- import the sales table and filter out orphan sales
     sales as (select * from {{ ref('stg_thc_analytics__sales') }} where is_orphan_order = false),
 
 -- final cte

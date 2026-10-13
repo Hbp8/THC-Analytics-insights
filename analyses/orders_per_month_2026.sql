@@ -1,3 +1,4 @@
+-- Analysis of the number of orders per month in 2026
 select
     extract(month from order_date) as month,
     count(distinct orders.orders_id) as total_monthly_orders_2026

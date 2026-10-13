@@ -1,3 +1,4 @@
+-- Fact table for orders with products quantity. One line per order, with total quantity of products in the order.
 {{
     config(
         materialized = 'incremental',

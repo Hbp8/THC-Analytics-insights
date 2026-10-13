@@ -1,3 +1,4 @@
+-- Staging model for the THC Analytics sales_recrutement table. One line per order per product.
 {{
     config(
         materialized = 'incremental',

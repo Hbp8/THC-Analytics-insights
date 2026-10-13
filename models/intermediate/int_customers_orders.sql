@@ -1,3 +1,5 @@
+-- Intermediate model checking the number of orders per customer and their first and last order dates, one row per customer.
+-- No incremental logic is needed here as we are interested in the latest updates for each customer, and the data is not expected to be very large.
 with
     sales as (select * from {{ ref('stg_thc_analytics__sales') }} where is_orphan_order = false),
     orders as (select * from {{ ref('stg_thc_analytics__orders') }}),
