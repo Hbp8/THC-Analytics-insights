@@ -7,6 +7,8 @@ A production-grade **dbt (data build tool)** project running on **Google BigQuer
 The challenge seemed simple based on two datasets but required a deeper understanding of the data structure to find the few subtelties hidden in it.
 For example, I found an orphan sales with no order to match. In the spirit of robustness and scalability in a real world context I implemented an "orphan" table to log the discrepency in a table (in order to understand what happened in the system and fix the issue) and excluded it from models.
 
+DBT Studio link: https://dz332.us1.dbt.com/studio/70506183162879/projects/70506183173653
+
 __All exercises were completed and you can find them in the following files__:
 
 1. Exercise 1: Performed in an analysis file `total_orders_2026.sql`
